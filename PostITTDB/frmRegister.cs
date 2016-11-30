@@ -46,7 +46,7 @@ namespace PostITTDB
 
             if(txtEmail.Text.Equals(""))
             {
-                MessageBox.Show("Please enter in a Firstname", "Field Empty",
+                MessageBox.Show("Please enter in a e-mail", "Field Empty",
                  MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.Focus();
                 return;
@@ -71,6 +71,7 @@ namespace PostITTDB
                 catch(Exception ex)
                 {
                     MessageBox.Show(ex.GetBaseException().ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
 
                 
