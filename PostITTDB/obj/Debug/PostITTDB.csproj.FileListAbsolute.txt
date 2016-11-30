@@ -13,3 +13,6 @@ C:\Users\seamus\Desktop\PostITTDB\PostITTDB\bin\Debug\EntityFramework.SqlServer.
 C:\Users\seamus\Desktop\PostITTDB\PostITTDB\obj\Debug\PostITTDB.exe
 C:\Users\seamus\Desktop\PostITTDB\PostITTDB\obj\Debug\PostITTDB.pdb
 C:\Users\seamus\Desktop\PostITTDB\PostITTDB\obj\Debug\PostITTDB.frmLogin.resources
+C:\Users\seamus\Desktop\PostITTDB\PostITTDB\obj\Debug\PostITTDB.frmDeregister.resources
+C:\Users\seamus\Desktop\PostITTDB\PostITTDB\obj\Debug\PostITTDB.frmViewProfile.resources
+C:\Users\seamus\Desktop\PostITTDB\PostITTDB\obj\Debug\PostITTDB.frmViewUsers.resources

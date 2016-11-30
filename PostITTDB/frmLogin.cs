@@ -52,8 +52,6 @@ namespace PostITTDB
                     MessageBox.Show(ex.GetBaseException().ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-
-
             }
         }
     }
