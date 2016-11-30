@@ -113,7 +113,7 @@ CREATE TABLE IttUser (
     surname    VARCHAR2(20) NOT NULL CONSTRAINT sname_chk CHECK(LENGTH(surname)>0 AND LENGTH(surname)<=20),
     password   VARCHAR2(30) NOT NULL,
     email      VARCHAR2(30) NOT NULL UNIQUE ,
-    score      NUMBER(5) CHECK(score>0 AND score<99999),
+    score      NUMBER(5) CHECK(score>-1 AND score<99999),
     profilePic VARCHAR2(50),
     userTypeId   NUMBER(5),
     CONSTRAINT pk_firstName PRIMARY KEY (userId),

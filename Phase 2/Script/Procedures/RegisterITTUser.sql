@@ -9,5 +9,5 @@ IS
 
 BEGIN
    INSERT INTO IttUser(userId, firstName, surname, password, email, score, profilePic, userTypeId)
-  VALUES(IttUser_seq.NEXTVAL,firstName, surname, password, email, score, profilePic, userTypeID );
+  VALUES(IttUser_seq.NEXTVAL,firstName, surname, password, email, score, 'default.jpg', userTypeID );
 END;
