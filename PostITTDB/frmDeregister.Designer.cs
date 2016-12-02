@@ -144,18 +144,21 @@
             this.viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
             this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
             this.viewProfileToolStripMenuItem.Text = "View Profile";
+            this.viewProfileToolStripMenuItem.Click += new System.EventHandler(this.viewProfileToolStripMenuItem_Click);
             // 
             // viewUsersToolStripMenuItem
             // 
             this.viewUsersToolStripMenuItem.Name = "viewUsersToolStripMenuItem";
             this.viewUsersToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
             this.viewUsersToolStripMenuItem.Text = "View Leaderboard";
+            this.viewUsersToolStripMenuItem.Click += new System.EventHandler(this.viewUsersToolStripMenuItem_Click);
             // 
             // deregisterToolStripMenuItem
             // 
             this.deregisterToolStripMenuItem.Name = "deregisterToolStripMenuItem";
             this.deregisterToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
             this.deregisterToolStripMenuItem.Text = "Deregister";
+            this.deregisterToolStripMenuItem.Click += new System.EventHandler(this.deregisterToolStripMenuItem_Click);
             // 
             // newsfeedToolStripMenuItem
             // 
@@ -169,6 +172,7 @@
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
             this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // frmDeregister
             // 

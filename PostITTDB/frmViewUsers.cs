@@ -25,5 +25,40 @@ namespace PostITTDB
             this.vIEWUSERPROFILETableAdapter.Fill(this.postITTDS.VIEWUSERPROFILE);
 
         }
+
+        private void newsfeedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNewsfeed newsFeed = new frmNewsfeed();
+            this.Hide();
+            newsFeed.Show();
+        }
+
+        private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmViewProfile viewProf = new frmViewProfile();
+            this.Hide();
+            viewProf.Show();
+        }
+
+        private void viewUsersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmViewUsers users = new frmViewUsers();
+            this.Hide();
+            users.Show();
+        }
+
+        private void deregisterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDeregister dereg = new frmDeregister();
+            this.Hide();
+            dereg.Show();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmChangePassword chgPass = new frmChangePassword();
+            this.Hide();
+            chgPass.Show();
+        }
     }
 }

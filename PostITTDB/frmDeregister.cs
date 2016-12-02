@@ -60,5 +60,33 @@ namespace PostITTDB
             this.Hide();
             newsfeed.Show();
         }
+
+        private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmViewProfile profile = new frmViewProfile();
+            this.Hide();
+            profile.Show();
+        }
+
+        private void viewUsersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmViewUsers users = new frmViewUsers();
+            this.Hide();
+            users.Show();
+        }
+
+        private void deregisterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDeregister dereg = new frmDeregister();
+            this.Hide();
+            dereg.Show();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmChangePassword chgPass = new frmChangePassword();
+            this.Hide();
+            chgPass.Show();
+        }
     }
 }

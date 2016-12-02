@@ -56,12 +56,19 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vIEWUSERPOSTSTYPECATTAGRANKBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vIEWUSERPOSTSTYPECATTAGRANKTableAdapter = new PostITTDB.PostITTDSTableAdapters.VIEWUSERPOSTSTYPECATTAGRANKTableAdapter();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.newsfeedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deregisterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.postITTDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWUSERPROFILEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWUSERPROFILEBindingNavigator)).BeginInit();
             this.vIEWUSERPROFILEBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWUSERPROFILEDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWUSERPOSTSTYPECATTAGRANKBindingSource)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // postITTDS
@@ -284,11 +291,62 @@
             // 
             this.vIEWUSERPOSTSTYPECATTAGRANKTableAdapter.ClearBeforeFill = true;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newsfeedToolStripMenuItem,
+            this.viewProfileToolStripMenuItem,
+            this.viewUsersToolStripMenuItem,
+            this.deregisterToolStripMenuItem,
+            this.changePasswordToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 27);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1155, 28);
+            this.menuStrip1.TabIndex = 51;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // newsfeedToolStripMenuItem
+            // 
+            this.newsfeedToolStripMenuItem.Name = "newsfeedToolStripMenuItem";
+            this.newsfeedToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
+            this.newsfeedToolStripMenuItem.Text = "Newsfeed";
+            this.newsfeedToolStripMenuItem.Click += new System.EventHandler(this.newsfeedToolStripMenuItem_Click);
+            // 
+            // viewProfileToolStripMenuItem
+            // 
+            this.viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
+            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
+            this.viewProfileToolStripMenuItem.Text = "View Profile";
+            this.viewProfileToolStripMenuItem.Click += new System.EventHandler(this.viewProfileToolStripMenuItem_Click);
+            // 
+            // viewUsersToolStripMenuItem
+            // 
+            this.viewUsersToolStripMenuItem.Name = "viewUsersToolStripMenuItem";
+            this.viewUsersToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
+            this.viewUsersToolStripMenuItem.Text = "View Leaderboard";
+            this.viewUsersToolStripMenuItem.Click += new System.EventHandler(this.viewUsersToolStripMenuItem_Click);
+            // 
+            // deregisterToolStripMenuItem
+            // 
+            this.deregisterToolStripMenuItem.Name = "deregisterToolStripMenuItem";
+            this.deregisterToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
+            this.deregisterToolStripMenuItem.Text = "Deregister";
+            this.deregisterToolStripMenuItem.Click += new System.EventHandler(this.deregisterToolStripMenuItem_Click);
+            // 
+            // changePasswordToolStripMenuItem
+            // 
+            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
+            this.changePasswordToolStripMenuItem.Text = "Change Password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
+            // 
             // frmViewUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1155, 379);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.vIEWUSERPROFILEDataGridView);
             this.Controls.Add(this.vIEWUSERPROFILEBindingNavigator);
             this.Name = "frmViewUsers";
@@ -301,6 +359,8 @@
             this.vIEWUSERPROFILEBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWUSERPROFILEDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWUSERPOSTSTYPECATTAGRANKBindingSource)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,5 +394,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.BindingSource vIEWUSERPOSTSTYPECATTAGRANKBindingSource;
         private PostITTDSTableAdapters.VIEWUSERPOSTSTYPECATTAGRANKTableAdapter vIEWUSERPOSTSTYPECATTAGRANKTableAdapter;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem newsfeedToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewProfileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewUsersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deregisterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
     }
 }
