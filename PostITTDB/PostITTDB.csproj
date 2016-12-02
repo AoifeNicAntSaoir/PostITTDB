@@ -77,6 +77,12 @@
     <Compile Include="CLUB.cs">
       <DependentUpon>PostITTModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="frmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangePassword.Designer.cs">
+      <DependentUpon>frmChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDeregister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,12 @@
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewsfeed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewsfeed.Designer.cs">
+      <DependentUpon>frmNewsfeed.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRegister.cs">
       <SubType>Form</SubType>

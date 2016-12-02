@@ -49,10 +49,15 @@ namespace PostITTDB
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.GetBaseException().ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    lblError.Visible = true;
                     return;
                 }
             }
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+            lblError.Visible = false;
         }
     }
 }

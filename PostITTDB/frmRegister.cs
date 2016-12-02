@@ -67,6 +67,11 @@ namespace PostITTDB
                     var result = context.CREATEITTUSER(newStudent.FIRSTNAME, newStudent.SURNAME, newStudent.PASSWORD, newStudent.EMAIL);
                     context.SaveChanges();
                     MessageBox.Show(newStudent.FIRSTNAME + " " + newStudent.SURNAME + " account has been created", "Account Registered", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtEmail.Text = "";
+                    txtFirstName.Text = "";
+                    txtPassword.Text = "";
+                    txtSurname.Text = "";
+
                 }
                 catch(Exception ex)
                 {
@@ -78,5 +83,11 @@ namespace PostITTDB
             }
         }
 
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            this.Hide();
+            login.Visible = true;
+        }
     }
 }

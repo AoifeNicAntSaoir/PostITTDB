@@ -53,5 +53,12 @@ namespace PostITTDB
 
             }
         }
+
+        private void newsfeedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNewsfeed newsfeed = new frmNewsfeed();
+            this.Hide();
+            newsfeed.Show();
+        }
     }
 }

@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblPassword = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lblError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnRegister
@@ -96,11 +97,23 @@
             this.label2.TabIndex = 43;
             this.label2.Text = "Login";
             // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.Color.Red;
+            this.lblError.Location = new System.Drawing.Point(230, 254);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(243, 25);
+            this.lblError.TabIndex = 44;
+            this.lblError.Text = "Error with login details";
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(609, 519);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtEmail);
@@ -109,6 +122,7 @@
             this.Controls.Add(this.lblPassword);
             this.Name = "frmLogin";
             this.Text = "PostITT - Login";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -122,5 +136,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblError;
     }
 }
