@@ -47,13 +47,6 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.vIEWUSERPROFILEBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.vIEWUSERPROFILEDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vIEWUSERPOSTSTYPECATTAGRANKBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vIEWUSERPOSTSTYPECATTAGRANKTableAdapter = new PostITTDB.PostITTDSTableAdapters.VIEWUSERPOSTSTYPECATTAGRANKTableAdapter();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -62,13 +55,27 @@
             this.viewUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deregisterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.txtFirstName = new System.Windows.Forms.TextBox();
+            this.lblSurname = new System.Windows.Forms.Label();
+            this.lblFirstName = new System.Windows.Forms.Label();
+            this.vIEWUSERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vIEWUSERTableAdapter = new PostITTDB.PostITTDSTableAdapters.VIEWUSERTableAdapter();
+            this.vIEWUSERDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.updateStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.postITTDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWUSERPROFILEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWUSERPROFILEBindingNavigator)).BeginInit();
             this.vIEWUSERPROFILEBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vIEWUSERPROFILEDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWUSERPOSTSTYPECATTAGRANKBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vIEWUSERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vIEWUSERDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // postITTDS
@@ -129,9 +136,10 @@
             this.vIEWUSERPROFILEBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.vIEWUSERPROFILEBindingNavigator.Name = "vIEWUSERPROFILEBindingNavigator";
             this.vIEWUSERPROFILEBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.vIEWUSERPROFILEBindingNavigator.Size = new System.Drawing.Size(1155, 27);
+            this.vIEWUSERPROFILEBindingNavigator.Size = new System.Drawing.Size(1173, 27);
             this.vIEWUSERPROFILEBindingNavigator.TabIndex = 0;
             this.vIEWUSERPROFILEBindingNavigator.Text = "bindingNavigator1";
+            this.vIEWUSERPROFILEBindingNavigator.RefreshItems += new System.EventHandler(this.vIEWUSERPROFILEBindingNavigator_RefreshItems);
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -227,61 +235,6 @@
             this.vIEWUSERPROFILEBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.vIEWUSERPROFILEBindingNavigatorSaveItem.Text = "Save Data";
             // 
-            // vIEWUSERPROFILEDataGridView
-            // 
-            this.vIEWUSERPROFILEDataGridView.AutoGenerateColumns = false;
-            this.vIEWUSERPROFILEDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.vIEWUSERPROFILEDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.vIEWUSERPROFILEDataGridView.DataSource = this.vIEWUSERPROFILEBindingSource;
-            this.vIEWUSERPROFILEDataGridView.Enabled = false;
-            this.vIEWUSERPROFILEDataGridView.Location = new System.Drawing.Point(31, 94);
-            this.vIEWUSERPROFILEDataGridView.Name = "vIEWUSERPROFILEDataGridView";
-            this.vIEWUSERPROFILEDataGridView.RowTemplate.Height = 24;
-            this.vIEWUSERPROFILEDataGridView.Size = new System.Drawing.Size(890, 220);
-            this.vIEWUSERPROFILEDataGridView.TabIndex = 1;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "USERID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "USERID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "FIRSTNAME";
-            this.dataGridViewTextBoxColumn2.HeaderText = "FIRSTNAME";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "SURNAME";
-            this.dataGridViewTextBoxColumn3.HeaderText = "SURNAME";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "EMAIL";
-            this.dataGridViewTextBoxColumn4.HeaderText = "EMAIL";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "SCORE";
-            this.dataGridViewTextBoxColumn5.HeaderText = "SCORE";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "PROFILEPIC";
-            this.dataGridViewTextBoxColumn6.HeaderText = "PROFILEPIC";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
             // vIEWUSERPOSTSTYPECATTAGRANKBindingSource
             // 
             this.vIEWUSERPOSTSTYPECATTAGRANKBindingSource.DataMember = "VIEWUSERPOSTSTYPECATTAGRANK";
@@ -299,10 +252,11 @@
             this.viewProfileToolStripMenuItem,
             this.viewUsersToolStripMenuItem,
             this.deregisterToolStripMenuItem,
-            this.changePasswordToolStripMenuItem});
+            this.changePasswordToolStripMenuItem,
+            this.updateStatusToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 27);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1155, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1173, 28);
             this.menuStrip1.TabIndex = 51;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -341,13 +295,123 @@
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(533, 190);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(131, 45);
+            this.btnSearch.TabIndex = 56;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click_1);
+            // 
+            // txtSurname
+            // 
+            this.txtSurname.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSurname.Location = new System.Drawing.Point(533, 139);
+            this.txtSurname.MaxLength = 20;
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(268, 32);
+            this.txtSurname.TabIndex = 55;
+            // 
+            // txtFirstName
+            // 
+            this.txtFirstName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstName.Location = new System.Drawing.Point(533, 82);
+            this.txtFirstName.MaxLength = 20;
+            this.txtFirstName.Name = "txtFirstName";
+            this.txtFirstName.Size = new System.Drawing.Size(268, 32);
+            this.txtFirstName.TabIndex = 54;
+            // 
+            // lblSurname
+            // 
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurname.Location = new System.Drawing.Point(382, 142);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(113, 25);
+            this.lblSurname.TabIndex = 53;
+            this.lblSurname.Text = "Surname:";
+            // 
+            // lblFirstName
+            // 
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.Location = new System.Drawing.Point(364, 89);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(131, 25);
+            this.lblFirstName.TabIndex = 52;
+            this.lblFirstName.Text = "First Name:";
+            // 
+            // vIEWUSERBindingSource
+            // 
+            this.vIEWUSERBindingSource.DataMember = "VIEWUSER";
+            this.vIEWUSERBindingSource.DataSource = this.postITTDS;
+            // 
+            // vIEWUSERTableAdapter
+            // 
+            this.vIEWUSERTableAdapter.ClearBeforeFill = true;
+            // 
+            // vIEWUSERDataGridView
+            // 
+            this.vIEWUSERDataGridView.AutoGenerateColumns = false;
+            this.vIEWUSERDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.vIEWUSERDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.vIEWUSERDataGridView.DataSource = this.vIEWUSERBindingSource;
+            this.vIEWUSERDataGridView.Location = new System.Drawing.Point(180, 269);
+            this.vIEWUSERDataGridView.Name = "vIEWUSERDataGridView";
+            this.vIEWUSERDataGridView.RowTemplate.Height = 24;
+            this.vIEWUSERDataGridView.Size = new System.Drawing.Size(675, 220);
+            this.vIEWUSERDataGridView.TabIndex = 56;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "USERID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "USERID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "FIRSTNAME";
+            this.dataGridViewTextBoxColumn2.HeaderText = "FIRSTNAME";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "SURNAME";
+            this.dataGridViewTextBoxColumn3.HeaderText = "SURNAME";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "SCORE";
+            this.dataGridViewTextBoxColumn4.HeaderText = "SCORE";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // updateStatusToolStripMenuItem
+            // 
+            this.updateStatusToolStripMenuItem.Name = "updateStatusToolStripMenuItem";
+            this.updateStatusToolStripMenuItem.Size = new System.Drawing.Size(114, 24);
+            this.updateStatusToolStripMenuItem.Text = "Update Status";
+            this.updateStatusToolStripMenuItem.Click += new System.EventHandler(this.updateStatusToolStripMenuItem_Click);
+            // 
             // frmViewUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1155, 379);
+            this.ClientSize = new System.Drawing.Size(1173, 565);
+            this.Controls.Add(this.vIEWUSERDataGridView);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtSurname);
+            this.Controls.Add(this.txtFirstName);
+            this.Controls.Add(this.lblSurname);
+            this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.vIEWUSERPROFILEDataGridView);
             this.Controls.Add(this.vIEWUSERPROFILEBindingNavigator);
             this.Name = "frmViewUsers";
             this.Text = "viewUsers";
@@ -357,10 +421,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.vIEWUSERPROFILEBindingNavigator)).EndInit();
             this.vIEWUSERPROFILEBindingNavigator.ResumeLayout(false);
             this.vIEWUSERPROFILEBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vIEWUSERPROFILEDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWUSERPOSTSTYPECATTAGRANKBindingSource)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vIEWUSERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vIEWUSERDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -385,13 +450,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton vIEWUSERPROFILEBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView vIEWUSERPROFILEDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.BindingSource vIEWUSERPOSTSTYPECATTAGRANKBindingSource;
         private PostITTDSTableAdapters.VIEWUSERPOSTSTYPECATTAGRANKTableAdapter vIEWUSERPOSTSTYPECATTAGRANKTableAdapter;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -400,5 +458,18 @@
         private System.Windows.Forms.ToolStripMenuItem viewUsersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deregisterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.TextBox txtFirstName;
+        private System.Windows.Forms.Label lblSurname;
+        private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.BindingSource vIEWUSERBindingSource;
+        private PostITTDSTableAdapters.VIEWUSERTableAdapter vIEWUSERTableAdapter;
+        private System.Windows.Forms.DataGridView vIEWUSERDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.ToolStripMenuItem updateStatusToolStripMenuItem;
     }
 }

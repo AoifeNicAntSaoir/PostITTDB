@@ -199,5 +199,18 @@ namespace PostITTDB
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("UPDATESCORE", uIDParameter);
         }
+    
+        public virtual int CALLGETUSERID(string e_MAIL, string pWD)
+        {
+            var e_MAILParameter = e_MAIL != null ?
+                new ObjectParameter("E_MAIL", e_MAIL) :
+                new ObjectParameter("E_MAIL", typeof(string));
+    
+            var pWDParameter = pWD != null ?
+                new ObjectParameter("PWD", pWD) :
+                new ObjectParameter("PWD", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("CALLGETUSERID", e_MAILParameter, pWDParameter);
+        }
     }
 }

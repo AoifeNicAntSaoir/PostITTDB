@@ -427,5 +427,9 @@
     <FunctionImport Name="UPDATESCORE">
       <Parameter Name="UID" Mode="In" Type="Decimal" />
     </FunctionImport>
+    <FunctionImport Name="CALLGETUSERID">
+      <Parameter Name="E_MAIL" Mode="In" Type="String" />
+      <Parameter Name="PWD" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
 </Schema>

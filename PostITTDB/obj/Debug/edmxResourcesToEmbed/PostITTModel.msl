@@ -199,5 +199,6 @@
     <FunctionImportMapping FunctionImportName="REPLYPOST" FunctionName="PostITTModel.Store.REPLYPOST" />
     <FunctionImportMapping FunctionImportName="REPLYPOSTPROC" FunctionName="PostITTModel.Store.REPLYPOSTPROC" />
     <FunctionImportMapping FunctionImportName="UPDATESCORE" FunctionName="PostITTModel.Store.UPDATESCORE" />
+    <FunctionImportMapping FunctionImportName="CALLGETUSERID" FunctionName="PostITTModel.Store.CALLGETUSERID" />
   </EntityContainerMapping>
 </Mapping>

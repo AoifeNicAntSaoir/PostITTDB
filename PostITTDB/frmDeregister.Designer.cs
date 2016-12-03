@@ -37,11 +37,12 @@
             this.lblFirstName = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.newsfeedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deregisterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newsfeedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.updateStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,12 +133,20 @@
             this.viewProfileToolStripMenuItem,
             this.viewUsersToolStripMenuItem,
             this.deregisterToolStripMenuItem,
-            this.changePasswordToolStripMenuItem});
+            this.changePasswordToolStripMenuItem,
+            this.updateStatusToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(639, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(756, 28);
             this.menuStrip1.TabIndex = 47;
             this.menuStrip1.Text = "menuStrip1";
+            // 
+            // newsfeedToolStripMenuItem
+            // 
+            this.newsfeedToolStripMenuItem.Name = "newsfeedToolStripMenuItem";
+            this.newsfeedToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
+            this.newsfeedToolStripMenuItem.Text = "Newsfeed";
+            this.newsfeedToolStripMenuItem.Click += new System.EventHandler(this.newsfeedToolStripMenuItem_Click);
             // 
             // viewProfileToolStripMenuItem
             // 
@@ -160,13 +169,6 @@
             this.deregisterToolStripMenuItem.Text = "Deregister";
             this.deregisterToolStripMenuItem.Click += new System.EventHandler(this.deregisterToolStripMenuItem_Click);
             // 
-            // newsfeedToolStripMenuItem
-            // 
-            this.newsfeedToolStripMenuItem.Name = "newsfeedToolStripMenuItem";
-            this.newsfeedToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
-            this.newsfeedToolStripMenuItem.Text = "Newsfeed";
-            this.newsfeedToolStripMenuItem.Click += new System.EventHandler(this.newsfeedToolStripMenuItem_Click);
-            // 
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
@@ -174,11 +176,18 @@
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
+            // updateStatusToolStripMenuItem
+            // 
+            this.updateStatusToolStripMenuItem.Name = "updateStatusToolStripMenuItem";
+            this.updateStatusToolStripMenuItem.Size = new System.Drawing.Size(114, 24);
+            this.updateStatusToolStripMenuItem.Text = "Update Status";
+            this.updateStatusToolStripMenuItem.Click += new System.EventHandler(this.updateStatusToolStripMenuItem_Click);
+            // 
             // frmDeregister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 485);
+            this.ClientSize = new System.Drawing.Size(756, 514);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPassword);
@@ -214,5 +223,6 @@
         private System.Windows.Forms.ToolStripMenuItem viewUsersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deregisterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem updateStatusToolStripMenuItem;
     }
 }

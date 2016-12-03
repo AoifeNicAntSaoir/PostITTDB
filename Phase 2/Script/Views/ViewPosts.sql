@@ -1,13 +1,10 @@
-CREATE OR REPLACE VIEW ViewPosts
-AS SELECT P.userId, surname, postText, postType, categoryName, tagName, postRank 
-FROM IttUser U, Post P, PostType O, Category C, Tag T, Rank R 
-WHERE U.userId = P.userId AND
-      P.postId = R.postId AND
-      P.postTypeId = O.postTypeId AND
-      P.categoryId = C.categoryId AND
-      C.categoryId = T.categoryId AND
-      P.postId = R.postId;
-      
-      
-SELECT userId, surname, postText, postType, categoryName, tagName, postRank 
-FROM ViewPosts;
+CREATE OR REPLACE VIEW viewPosts AS
+SELECT p.postid, p.parentid, p.postdate, p.posttext, u.firstname, u.surname, t.posttypedesc, c.categoryname, m.url
+FROM ITTUSER u, POST p, media m, category c, posttype t
+WHERE p.userid = u.userid AND
+      m.mediaid = p.postid AND
+       p.categoryid = c.Categoryid AND
+       p.posttypeid = t.posttypeid
+ORDER BY p.postid DESC;
+
+SELECT * FROM viewPosts;

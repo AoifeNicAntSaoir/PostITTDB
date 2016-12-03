@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Oracle.ManagedDataAccess.Client;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,8 +20,9 @@ namespace PostITTDB
 
         private void viewUsers_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'postITTDS.VIEWUSERPOSTSTYPECATTAGRANK' table. You can move, or remove it, as needed.
-            this.vIEWUSERPOSTSTYPECATTAGRANKTableAdapter.Fill(this.postITTDS.VIEWUSERPOSTSTYPECATTAGRANK);
+            // TODO: This line of code loads data into the 'postITTDS.VIEWUSER' table. You can move, or remove it, as needed.
+            this.vIEWUSERTableAdapter.Fill(this.postITTDS.VIEWUSER);
+
             // TODO: This line of code loads data into the 'postITTDS.VIEWUSERPROFILE' table. You can move, or remove it, as needed.
             this.vIEWUSERPROFILETableAdapter.Fill(this.postITTDS.VIEWUSERPROFILE);
 
@@ -59,6 +61,34 @@ namespace PostITTDB
             frmChangePassword chgPass = new frmChangePassword();
             this.Hide();
             chgPass.Show();
+        }
+
+        private void vIEWUSERPROFILEDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+     
+        private void btnSearch_Click_1(object sender, EventArgs e)
+        {
+            this.vIEWUSERPROFILETableAdapter.Fill(this.postITTDS.VIEWUSERPROFILE);
+
+
+
+
+
+        }
+
+        private void vIEWUSERPROFILEBindingNavigator_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateStatusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUpdateStatus updateStatus = new frmUpdateStatus();
+            this.Hide();
+            updateStatus.Show();
         }
     }
 }

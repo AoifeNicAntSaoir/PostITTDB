@@ -1,9 +1,10 @@
 --VIEW USERS
 CREATE OR REPLACE VIEW ViewUser
-AS SELECT userId, firstName, surname
-FROM IttUser;
+AS SELECT userId, firstName, surname, score
+FROM IttUser
+ORDER BY score DESC;
            
-SELECT userId, firstName, surname
+SELECT *
 FROM ViewUser;
 
 --VIEW POSTS

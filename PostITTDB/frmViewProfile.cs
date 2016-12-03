@@ -51,5 +51,12 @@ namespace PostITTDB
             this.Hide();
             chgPass.Show();
         }
+
+        private void frmUpdateStatusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUpdateStatus updateStatus = new frmUpdateStatus();
+            this.Hide();
+            updateStatus.Show();
+        }
     }
 }

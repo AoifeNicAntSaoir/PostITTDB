@@ -51,5 +51,19 @@ namespace PostITTDB
             this.Hide();
             chgPassword.Show();
         }
+
+        private void frmNewsfeed_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'viewPosts.VIEWPOSTS' table. You can move, or remove it, as needed.
+            this.vIEWPOSTSTableAdapter.Fill(this.viewPosts.VIEWPOSTS);
+
+        }
+
+        private void updateStatusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUpdateStatus updateStatus = new frmUpdateStatus();
+            this.Hide();
+            updateStatus.Show();
+        }
     }
 }

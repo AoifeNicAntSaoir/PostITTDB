@@ -320,6 +320,10 @@ warning 6002: The table/view 'AOIFESAYERS.VIEWUSERTYPEPOSTS' does not have a pri
     </ReferentialConstraint>
   </Association>
   <Function Name="ANSWERPOST" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AOIFESAYERS" />
+  <Function Name="CALLGETUSERID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AOIFESAYERS">
+    <Parameter Name="E_MAIL" Type="varchar2" Mode="In" />
+    <Parameter Name="PWD" Type="varchar2" Mode="In" />
+  </Function>
   <Function Name="CREATEADMINISTRATOR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AOIFESAYERS" />
   <Function Name="CREATECATEGORY" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AOIFESAYERS">
     <Parameter Name="CATDESC" Type="varchar2" Mode="In" />
@@ -339,6 +343,14 @@ warning 6002: The table/view 'AOIFESAYERS.VIEWUSERTYPEPOSTS' does not have a pri
     <Parameter Name="SNAM" Type="varchar2" Mode="In" />
     <Parameter Name="PASS" Type="varchar2" Mode="In" />
   </Function>
+  <Function Name="GETUSERID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="AOIFESAYERS" ReturnType="number">
+    <Parameter Name="E_MAIL" Type="varchar2" Mode="In" />
+    <Parameter Name="PASSWD" Type="varchar2" Mode="In" />
+  </Function>
+  <Function Name="GETUSERSNAME" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="AOIFESAYERS" ReturnType="varchar2">
+    <Parameter Name="E_MAIL" Type="varchar2" Mode="In" />
+    <Parameter Name="PASSWD" Type="varchar2" Mode="In" />
+  </Function>
   <Function Name="INFORMATIVEPOST" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AOIFESAYERS" />
   <Function Name="INITIALPOST" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AOIFESAYERS">
     <Parameter Name="POSTID" Type="varchar2" Mode="In" />
@@ -356,6 +368,10 @@ warning 6002: The table/view 'AOIFESAYERS.VIEWUSERTYPEPOSTS' does not have a pri
   <Function Name="LOGIN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AOIFESAYERS">
     <Parameter Name="V_EMAIL" Type="varchar2" Mode="In" />
     <Parameter Name="V_PASSWORD" Type="varchar2" Mode="In" />
+  </Function>
+  <Function Name="LOG_IN" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="AOIFESAYERS" ReturnType="varchar2">
+    <Parameter Name="E_MAIL" Type="varchar2" Mode="In" />
+    <Parameter Name="PASSW_D" Type="varchar2" Mode="In" />
   </Function>
   <Function Name="QUESTIONPOST" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AOIFESAYERS" />
   <Function Name="REPLYPOST" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AOIFESAYERS" />

@@ -5031,6 +5031,8 @@ namespace PostITTDB {
             
             private global::System.Data.DataColumn columnSURNAME;
             
+            private global::System.Data.DataColumn columnSCORE;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public VIEWUSERDataTable() {
@@ -5090,6 +5092,14 @@ namespace PostITTDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SCOREColumn {
+                get {
+                    return this.columnSCORE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -5125,12 +5135,13 @@ namespace PostITTDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public VIEWUSERRow AddVIEWUSERRow(int USERID, string FIRSTNAME, string SURNAME) {
+            public VIEWUSERRow AddVIEWUSERRow(int USERID, string FIRSTNAME, string SURNAME, int SCORE) {
                 VIEWUSERRow rowVIEWUSERRow = ((VIEWUSERRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         USERID,
                         FIRSTNAME,
-                        SURNAME};
+                        SURNAME,
+                        SCORE};
                 rowVIEWUSERRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowVIEWUSERRow);
                 return rowVIEWUSERRow;
@@ -5156,6 +5167,7 @@ namespace PostITTDB {
                 this.columnUSERID = base.Columns["USERID"];
                 this.columnFIRSTNAME = base.Columns["FIRSTNAME"];
                 this.columnSURNAME = base.Columns["SURNAME"];
+                this.columnSCORE = base.Columns["SCORE"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5167,6 +5179,8 @@ namespace PostITTDB {
                 base.Columns.Add(this.columnFIRSTNAME);
                 this.columnSURNAME = new global::System.Data.DataColumn("SURNAME", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSURNAME);
+                this.columnSCORE = new global::System.Data.DataColumn("SCORE", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSCORE);
                 this.columnUSERID.AllowDBNull = false;
                 this.columnFIRSTNAME.AllowDBNull = false;
                 this.columnFIRSTNAME.MaxLength = 20;
@@ -8062,6 +8076,34 @@ namespace PostITTDB {
                 set {
                     this[this.tableVIEWUSER.SURNAMEColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int SCORE {
+                get {
+                    try {
+                        return ((int)(this[this.tableVIEWUSER.SCOREColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'SCORE\' in table \'VIEWUSER\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVIEWUSER.SCOREColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSCORENull() {
+                return this.IsNull(this.tableVIEWUSER.SCOREColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSCORENull() {
+                this[this.tableVIEWUSER.SCOREColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -15006,8 +15048,7 @@ namespace PostITTDB.PostITTDSTableAdapters {
             this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT USERID, SURNAME, POSTTEXT, POSTTYPE, CATEGORYNAME, TAGNAME, POSTRANK FROM " +
-                "AOIFESAYERS.VIEWPOSTS";
+            this._commandCollection[0].CommandText = "SELECT USERID, POSTTYPE, TAGNAME, POSTRANK, URL FROM AOIFESAYERS.VIEWPOSTS";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -15160,6 +15201,7 @@ namespace PostITTDB.PostITTDSTableAdapters {
             tableMapping.ColumnMappings.Add("USERID", "USERID");
             tableMapping.ColumnMappings.Add("FIRSTNAME", "FIRSTNAME");
             tableMapping.ColumnMappings.Add("SURNAME", "SURNAME");
+            tableMapping.ColumnMappings.Add("SCORE", "SCORE");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -15176,7 +15218,7 @@ namespace PostITTDB.PostITTDSTableAdapters {
             this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT USERID, FIRSTNAME, SURNAME FROM AOIFESAYERS.VIEWUSER";
+            this._commandCollection[0].CommandText = "SELECT USERID, FIRSTNAME, SURNAME, SCORE FROM AOIFESAYERS.VIEWUSER";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -15921,7 +15963,7 @@ namespace PostITTDB.PostITTDSTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.IDbCommand[24];
+            this._commandCollection = new global::System.Data.IDbCommand[27];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[0])).Connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection(global::PostITTDB.Properties.Settings.Default.PostITTDB);
             ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[0])).CommandText = "AOIFESAYERS.ADD_MEDIA";
@@ -16181,6 +16223,85 @@ namespace PostITTDB.PostITTDSTableAdapters {
             ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[23])).Connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection(global::PostITTDB.Properties.Settings.Default.PostITTDB);
             ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[23])).CommandText = "AOIFESAYERS.SEARCH_BY_USER";
             ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[23])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[24] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[24])).Connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection(global::PostITTDB.Properties.Settings.Default.PostITTDB);
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[24])).CommandText = "AOIFESAYERS.GETUSERID";
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[24])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "\"ReturnValue\"";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.Direction = global::System.Data.ParameterDirection.ReturnValue;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[24])).Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "E_MAIL";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 32767;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[24])).Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "PASSWD";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 32767;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[24])).Parameters.Add(param);
+            this._commandCollection[25] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[25])).Connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection(global::PostITTDB.Properties.Settings.Default.PostITTDB);
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[25])).CommandText = "AOIFESAYERS.GETUSERSNAME";
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[25])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "\"ReturnValue\"";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 32767;
+            param.Direction = global::System.Data.ParameterDirection.ReturnValue;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[25])).Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "E_MAIL";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 32767;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[25])).Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "PASSWD";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 32767;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[25])).Parameters.Add(param);
+            this._commandCollection[26] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[26])).Connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection(global::PostITTDB.Properties.Settings.Default.PostITTDB);
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[26])).CommandText = "AOIFESAYERS.LOG_IN";
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[26])).CommandType = global::System.Data.CommandType.StoredProcedure;
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "\"ReturnValue\"";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 32767;
+            param.Direction = global::System.Data.ParameterDirection.ReturnValue;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[26])).Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "E_MAIL";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 32767;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[26])).Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "PASSW_D";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 32767;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this._commandCollection[26])).Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16840,6 +16961,123 @@ namespace PostITTDB.PostITTDSTableAdapters {
                 }
             }
             return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual global::System.Nullable<decimal> GETUSERID(string E_MAIL, string PASSWD) {
+            global::Oracle.ManagedDataAccess.Client.OracleCommand command = ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this.CommandCollection[24]));
+            if ((E_MAIL == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(E_MAIL));
+            }
+            if ((PASSWD == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(PASSWD));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            try {
+                command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((command.Parameters[0].Value == null) 
+                        || (command.Parameters[0].Value.GetType() == typeof(global::System.DBNull)))) {
+                return new global::System.Nullable<decimal>();
+            }
+            else {
+                return new global::System.Nullable<decimal>(((decimal)(command.Parameters[0].Value)));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual string GETUSERSNAME(string E_MAIL, string PASSWD) {
+            global::Oracle.ManagedDataAccess.Client.OracleCommand command = ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this.CommandCollection[25]));
+            if ((E_MAIL == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(E_MAIL));
+            }
+            if ((PASSWD == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(PASSWD));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            try {
+                command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((command.Parameters[0].Value == null) 
+                        || (command.Parameters[0].Value.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((string)(command.Parameters[0].Value));
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual string LOG_IN(string E_MAIL, string PASSW_D) {
+            global::Oracle.ManagedDataAccess.Client.OracleCommand command = ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this.CommandCollection[26]));
+            if ((E_MAIL == null)) {
+                command.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[1].Value = ((string)(E_MAIL));
+            }
+            if ((PASSW_D == null)) {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                command.Parameters[2].Value = ((string)(PASSW_D));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            try {
+                command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            if (((command.Parameters[0].Value == null) 
+                        || (command.Parameters[0].Value.GetType() == typeof(global::System.DBNull)))) {
+                return null;
+            }
+            else {
+                return ((string)(command.Parameters[0].Value));
+            }
         }
     }
     

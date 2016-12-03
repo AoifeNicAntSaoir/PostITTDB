@@ -124,5 +124,22 @@ namespace PostITTDB
             this.Hide();
             chgPassword.Show();
         }
+
+        private void frmRegister_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateStatusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUpdateStatus updateStatus = new frmUpdateStatus();
+            this.Hide();
+            updateStatus.Show();
+        }
     }
 }
