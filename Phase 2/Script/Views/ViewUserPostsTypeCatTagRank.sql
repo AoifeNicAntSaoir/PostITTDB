@@ -11,5 +11,5 @@ WHERE U.userId = P.userId AND
       P.postId = R.postId;
       
       
-SELECT userId, surname, postText, postType, categoryName, tagName, postRank 
+SELECT *
 FROM ViewUserPostsTypeCatTagRank;

@@ -46,10 +46,11 @@ namespace PostITTDB
                     var result = context.LOGIN(newStudent.EMAIL, newStudent.PASSWORD);
                     context.SaveChanges();
                     MessageBox.Show("You have been successfully logged in", "Logged In", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    String sqlQuery = "Select firstname, surname from ITTUSER WHERE email LIKE '%" + txtEmail.Text + "' AND password like '%" + txtPassword.Text + "';";
-                   // var results = context.Database.SqlQuery<ITTUSER>(sqlQuery);
-                  //  var res = context.Database.ExecuteSqlCommand(sqlQuery);
-                    //MessageBox.Show(res.ToString(), "res", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //  String sqlQuery = "Select firstname, surname from ITTUSER WHERE email LIKE '%" + txtEmail.Text + "' AND password like '%" + txtPassword.Text + "';";
+                    frmNewsfeed newsFeed = new frmNewsfeed();
+                    this.Hide();
+                    newsFeed.Show();
+
                 }
                 catch (Exception ex)
                 {

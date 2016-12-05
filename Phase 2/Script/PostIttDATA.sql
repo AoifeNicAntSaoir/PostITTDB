@@ -44,16 +44,16 @@ INSERT INTO ITTUser
 VALUES(ittUser_seq.nextval, 'Katie', 'Griffiths', 'myPass!', 'katie@gmail', 30, 'mypicKatie.jpg', 1);
 
 --PostType
-INSERT INTO PostType(postTypeId,postType)
+INSERT INTO PostType(postTypeId,postTypeDesc)
 VALUES(PostType_seq.NEXTVAL,'Informative');
 
-INSERT INTO PostType(postTypeId,postType)
+INSERT INTO PostType(postTypeId,postTypeDesc)
 VALUES(PostType_seq.NEXTVAL,'Reply');
 
-INSERT INTO PostType(postTypeId,postType)
+INSERT INTO PostType(postTypeId,postTypeDesc)
 VALUES(PostType_seq.NEXTVAL,'Question');
 
-INSERT INTO PostType(postTypeId,postType)
+INSERT INTO PostType(postTypeId,postTypeDesc)
 VALUES(PostType_seq.NEXTVAL,'Answer');
     --shouldnt' insert
    /* INSERT INTO PostType(postTypeId,postType)

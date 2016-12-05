@@ -7,7 +7,7 @@ WHERE U.userTypeId = T.userTypeId AND
       U.userId = P.userId;
       
       
-SELECT userId, firstName, surname, typeDescription, postText
+SELECT *
 FROM ViewUserTypePosts;
 
 

@@ -121,7 +121,7 @@ CREATE TABLE IttUser (
   
 CREATE TABLE PostType (
     postTypeId NUMBER(5) CONSTRAINT postType_chk CHECK(postTypeId >0 AND postTypeId<=99999),
-    postType   VARCHAR2(20) NOT NULL CONSTRAINT postTypetbl_chk CHECK(postType IN('Informative','Reply','Question','Answer')),
+    postTypeDesc   VARCHAR2(20) NOT NULL CONSTRAINT postTypetbl_chk CHECK(postTypeDesc  IN('Informative','Reply','Question','Answer')),
     CONSTRAINT pk_postTypeId PRIMARY KEY (postTypeId));
 
 CREATE TABLE Category (

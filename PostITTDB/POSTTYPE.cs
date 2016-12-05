@@ -21,7 +21,7 @@ namespace PostITTDB
         }
     
         public short POSTTYPEID { get; set; }
-        public string POSTTYPE1 { get; set; }
+        public string POSTTYPEDESC { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<POST> POSTs { get; set; }

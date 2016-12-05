@@ -40,14 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.newsfeedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deregisterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.updateStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnRegister
@@ -170,70 +162,11 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newsfeedToolStripMenuItem,
-            this.viewProfileToolStripMenuItem,
-            this.viewUsersToolStripMenuItem,
-            this.deregisterToolStripMenuItem,
-            this.changePasswordToolStripMenuItem,
-            this.updateStatusToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(751, 28);
-            this.menuStrip1.TabIndex = 49;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // newsfeedToolStripMenuItem
-            // 
-            this.newsfeedToolStripMenuItem.Name = "newsfeedToolStripMenuItem";
-            this.newsfeedToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
-            this.newsfeedToolStripMenuItem.Text = "Newsfeed";
-            this.newsfeedToolStripMenuItem.Click += new System.EventHandler(this.newsfeedToolStripMenuItem_Click);
-            // 
-            // viewProfileToolStripMenuItem
-            // 
-            this.viewProfileToolStripMenuItem.Name = "viewProfileToolStripMenuItem";
-            this.viewProfileToolStripMenuItem.Size = new System.Drawing.Size(100, 24);
-            this.viewProfileToolStripMenuItem.Text = "View Profile";
-            this.viewProfileToolStripMenuItem.Click += new System.EventHandler(this.viewProfileToolStripMenuItem_Click);
-            // 
-            // viewUsersToolStripMenuItem
-            // 
-            this.viewUsersToolStripMenuItem.Name = "viewUsersToolStripMenuItem";
-            this.viewUsersToolStripMenuItem.Size = new System.Drawing.Size(142, 24);
-            this.viewUsersToolStripMenuItem.Text = "View Leaderboard";
-            this.viewUsersToolStripMenuItem.Click += new System.EventHandler(this.viewUsersToolStripMenuItem_Click);
-            // 
-            // deregisterToolStripMenuItem
-            // 
-            this.deregisterToolStripMenuItem.Name = "deregisterToolStripMenuItem";
-            this.deregisterToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
-            this.deregisterToolStripMenuItem.Text = "Deregister";
-            this.deregisterToolStripMenuItem.Click += new System.EventHandler(this.deregisterToolStripMenuItem_Click);
-            // 
-            // changePasswordToolStripMenuItem
-            // 
-            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
-            this.changePasswordToolStripMenuItem.Text = "Change Password";
-            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
-            // 
-            // updateStatusToolStripMenuItem
-            // 
-            this.updateStatusToolStripMenuItem.Name = "updateStatusToolStripMenuItem";
-            this.updateStatusToolStripMenuItem.Size = new System.Drawing.Size(114, 24);
-            this.updateStatusToolStripMenuItem.Text = "Update Status";
-            this.updateStatusToolStripMenuItem.Click += new System.EventHandler(this.updateStatusToolStripMenuItem_Click);
-            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(751, 569);
-            this.Controls.Add(this.menuStrip1);
+            this.ClientSize = new System.Drawing.Size(749, 602);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -249,8 +182,6 @@
             this.Name = "frmRegister";
             this.Text = "PostITT - Register";
             this.Load += new System.EventHandler(this.frmRegister_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,12 +201,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem newsfeedToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewProfileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewUsersToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deregisterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem updateStatusToolStripMenuItem;
     }
 }

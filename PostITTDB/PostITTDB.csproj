@@ -74,8 +74,10 @@
     <Compile Include="CATEGORY.cs">
       <DependentUpon>PostITTModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CLUB.cs">
-      <DependentUpon>PostITTModel.tt</DependentUpon>
+    <Compile Include="CatViewDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CatViewDS.xsd</DependentUpon>
     </Compile>
     <Compile Include="frmChangePassword.cs">
       <SubType>Form</SubType>
@@ -123,9 +125,6 @@
       <DependentUpon>PostITTModel.tt</DependentUpon>
     </Compile>
     <Compile Include="MEDIATYPE.cs">
-      <DependentUpon>PostITTModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MEDIA_MODERATOR_VIEW.cs">
       <DependentUpon>PostITTModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Medium.cs">
@@ -176,25 +175,10 @@
     <Compile Include="USERTYPE.cs">
       <DependentUpon>PostITTModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="VIEWPOST.cs">
-      <DependentUpon>PostITTModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="viewPosts.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>viewPosts.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="VIEWUSER.cs">
-      <DependentUpon>PostITTModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="VIEWUSERPOST.cs">
-      <DependentUpon>PostITTModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="VIEWUSERPOSTSTYPECATTAGRANK.cs">
-      <DependentUpon>PostITTModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="VIEWUSERPROFILE.cs">
-      <DependentUpon>PostITTModel.tt</DependentUpon>
     </Compile>
     <Compile Include="frmViewUsers.cs">
       <SubType>Form</SubType>
@@ -202,12 +186,20 @@
     <Compile Include="frmViewUsers.Designer.cs">
       <DependentUpon>frmViewUsers.cs</DependentUpon>
     </Compile>
-    <Compile Include="VIEWUSERTYPEPOST.cs">
-      <DependentUpon>PostITTModel.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="CatViewDS.xsc">
+      <DependentUpon>CatViewDS.xsd</DependentUpon>
+    </None>
+    <None Include="CatViewDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CatViewDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CatViewDS.xss">
+      <DependentUpon>CatViewDS.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <EntityDeploy Include="PostITTModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>

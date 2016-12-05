@@ -4,6 +4,6 @@ pTDesc VARCHAR2(20) := 'Question';
 
 BEGIN
         
-        INSERT INTO PostType(postTypeId,postType)
+        INSERT INTO PostType(postTypeId,postTypeDesc)
         VALUES(PostType_seq.NEXTVAL,pTDesc);
 END;

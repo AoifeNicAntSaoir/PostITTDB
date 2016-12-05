@@ -28,7 +28,6 @@ namespace PostITTDB
         }
     
         public virtual DbSet<CATEGORY> CATEGORies { get; set; }
-        public virtual DbSet<CLUB> CLUBs { get; set; }
         public virtual DbSet<ITTUSER> ITTUSERs { get; set; }
         public virtual DbSet<Medium> MEDIA { get; set; }
         public virtual DbSet<MEDIATYPE> MEDIATYPEs { get; set; }
@@ -37,13 +36,6 @@ namespace PostITTDB
         public virtual DbSet<RANK> RANKs { get; set; }
         public virtual DbSet<TAG> TAGs { get; set; }
         public virtual DbSet<USERTYPE> USERTYPEs { get; set; }
-        public virtual DbSet<MEDIA_MODERATOR_VIEW> MEDIA_MODERATOR_VIEW { get; set; }
-        public virtual DbSet<VIEWPOST> VIEWPOSTS { get; set; }
-        public virtual DbSet<VIEWUSER> VIEWUSERs { get; set; }
-        public virtual DbSet<VIEWUSERPOST> VIEWUSERPOSTS { get; set; }
-        public virtual DbSet<VIEWUSERPOSTSTYPECATTAGRANK> VIEWUSERPOSTSTYPECATTAGRANKs { get; set; }
-        public virtual DbSet<VIEWUSERPROFILE> VIEWUSERPROFILEs { get; set; }
-        public virtual DbSet<VIEWUSERTYPEPOST> VIEWUSERTYPEPOSTS { get; set; }
     
         public virtual int ANSWERPOST()
         {
@@ -211,6 +203,19 @@ namespace PostITTDB
                 new ObjectParameter("PWD", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("CALLGETUSERID", e_MAILParameter, pWDParameter);
+        }
+    
+        public virtual int CREATETAG(string tAGDESC, Nullable<decimal> cATID)
+        {
+            var tAGDESCParameter = tAGDESC != null ?
+                new ObjectParameter("TAGDESC", tAGDESC) :
+                new ObjectParameter("TAGDESC", typeof(string));
+    
+            var cATIDParameter = cATID.HasValue ?
+                new ObjectParameter("CATID", cATID) :
+                new ObjectParameter("CATID", typeof(decimal));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("CREATETAG", tAGDESCParameter, cATIDParameter);
         }
     }
 }
