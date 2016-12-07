@@ -18,3 +18,4 @@ C:\Users\seamus\Desktop\PostITTDB\PostITTDB\obj\Debug\PostITTDB.frmViewProfile.r
 C:\Users\seamus\Desktop\PostITTDB\PostITTDB\obj\Debug\PostITTDB.frmViewUsers.resources
 C:\Users\seamus\Desktop\PostITTDB\PostITTDB\obj\Debug\PostITTDB.frmNewsfeed.resources
 C:\Users\seamus\Desktop\PostITTDB\PostITTDB\obj\Debug\PostITTDB.frmUpdateStatus.resources
+C:\Users\seamus\Desktop\PostITTDB\PostITTDB\obj\Debug\PostITTDB.Properties.Resources.resources

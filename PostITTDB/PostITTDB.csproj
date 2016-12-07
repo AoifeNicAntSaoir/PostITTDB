@@ -162,6 +162,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -266,6 +271,10 @@
       <DependentUpon>PostITTModel.edmx</DependentUpon>
       <LastGenOutput>PostITTModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\213480200_1383760001_it_tralee.png" />
+    <None Include="Resources\postitt.png" />
+    <None Include="Resources\img.png" />
+    <None Include="Resources\post-it-note.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -291,6 +300,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmViewUsers.resx">
       <DependentUpon>frmViewUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

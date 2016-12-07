@@ -84,6 +84,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.MenuBar;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newsfeedToolStripMenuItem,
@@ -299,20 +300,22 @@
             // lblSurname
             // 
             this.lblSurname.AutoSize = true;
-            this.lblSurname.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurname.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurname.ForeColor = System.Drawing.Color.Blue;
             this.lblSurname.Location = new System.Drawing.Point(79, 109);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(113, 25);
+            this.lblSurname.Size = new System.Drawing.Size(119, 25);
             this.lblSurname.TabIndex = 52;
             this.lblSurname.Text = "Surname:";
             // 
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.Location = new System.Drawing.Point(70, 73);
+            this.lblFirstName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.ForeColor = System.Drawing.Color.Blue;
+            this.lblFirstName.Location = new System.Drawing.Point(56, 73);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(131, 25);
+            this.lblFirstName.Size = new System.Drawing.Size(142, 25);
             this.lblFirstName.TabIndex = 51;
             this.lblFirstName.Text = "First Name:";
             // 
@@ -347,6 +350,7 @@
             // vIEWPOSTSDataGridView
             // 
             this.vIEWPOSTSDataGridView.AutoGenerateColumns = false;
+            this.vIEWPOSTSDataGridView.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.vIEWPOSTSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.vIEWPOSTSDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -360,11 +364,11 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.vIEWPOSTSDataGridView.DataSource = this.vIEWPOSTSBindingSource;
-            this.vIEWPOSTSDataGridView.Location = new System.Drawing.Point(40, 160);
+            this.vIEWPOSTSDataGridView.Location = new System.Drawing.Point(12, 160);
             this.vIEWPOSTSDataGridView.Name = "vIEWPOSTSDataGridView";
             this.vIEWPOSTSDataGridView.RowTemplate.Height = 24;
             this.vIEWPOSTSDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.vIEWPOSTSDataGridView.Size = new System.Drawing.Size(1036, 220);
+            this.vIEWPOSTSDataGridView.Size = new System.Drawing.Size(1061, 220);
             this.vIEWPOSTSDataGridView.TabIndex = 54;
             // 
             // dataGridViewTextBoxColumn1
@@ -431,6 +435,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1272, 524);
             this.Controls.Add(this.vIEWPOSTSDataGridView);
             this.Controls.Add(this.lblSurnameLog);
@@ -441,7 +446,7 @@
             this.Controls.Add(this.vIEWPOSTSBindingNavigator);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmNewsfeed";
-            this.Text = "frmNewsfeed";
+            this.Text = "PostITT - Newsfeed";
             this.Load += new System.EventHandler(this.frmNewsfeed_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
