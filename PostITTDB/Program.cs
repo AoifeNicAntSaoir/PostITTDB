@@ -13,7 +13,7 @@ namespace PostITTDB
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmUpdateStatus());
+            Application.Run(new frmRegister());
         }
     }
 }

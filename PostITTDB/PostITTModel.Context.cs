@@ -217,5 +217,14 @@ namespace PostITTDB
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("CREATETAG", tAGDESCParameter, cATIDParameter);
         }
+    
+        public virtual int RANKPOST(Nullable<decimal> p_ID)
+        {
+            var p_IDParameter = p_ID.HasValue ?
+                new ObjectParameter("P_ID", p_ID) :
+                new ObjectParameter("P_ID", typeof(decimal));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("RANKPOST", p_IDParameter);
+        }
     }
 }

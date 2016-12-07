@@ -79,6 +79,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CatViewDS.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CurrentLoginUser.cs" />
     <Compile Include="frmChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>

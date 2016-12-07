@@ -81,20 +81,6 @@
     <Property Name="USERTYPEID" Type="number" Precision="5" Scale="0" Nullable="false" />
     <Property Name="TYPEDESCRIPTION" Type="varchar2" MaxLength="1" Nullable="false" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'AOIFESAYERS.CATEGORYVIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'AOIFESAYERS.POSTTYPEDESCVIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'AOIFESAYERS.VIEWPOSTS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'AOIFESAYERS.VIEWUSER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'AOIFESAYERS.VIEWUSERPOSTS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'AOIFESAYERS.VIEWUSERPROFILE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'AOIFESAYERS.VIEWUSERTYPEPOSTS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <Association Name="FK_CATEGORYID_P">
     <End Role="CATEGORY" Type="Self.CATEGORY" Multiplicity="0..1" />
     <End Role="POST" Type="Self.POST" Multiplicity="*" />
@@ -253,6 +239,9 @@ warning 6002: The table/view 'AOIFESAYERS.VIEWUSERTYPEPOSTS' does not have a pri
     <Parameter Name="V_PASSWORD" Type="varchar2" Mode="In" />
   </Function>
   <Function Name="QUESTIONPOST" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AOIFESAYERS" />
+  <Function Name="RANKPOST" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AOIFESAYERS">
+    <Parameter Name="P_ID" Type="number" Mode="In" />
+  </Function>
   <Function Name="REPLYPOST" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AOIFESAYERS" />
   <Function Name="REPLYPOSTPROC" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="AOIFESAYERS">
     <Parameter Name="CHILDPOSTID" Type="number" Mode="In" />

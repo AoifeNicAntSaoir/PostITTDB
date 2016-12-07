@@ -12,9 +12,11 @@ namespace PostITTDB
 {
     public partial class frmNewsfeed : Form
     {
+        private frmLogin loginDetails;
         public frmNewsfeed()
         {
             InitializeComponent();
+            loginDetails = new frmLogin();
         }
 
         private void newsfeedToolStripMenuItem_Click(object sender, EventArgs e)
@@ -54,8 +56,13 @@ namespace PostITTDB
 
         private void frmNewsfeed_Load(object sender, EventArgs e)
         {
+            txtFirstname.Text = CurrentLoginUser.firstname;
+            lblSurnameLog.Text = CurrentLoginUser.surname;
+
             // TODO: This line of code loads data into the 'viewPosts.VIEWPOSTS' table. You can move, or remove it, as needed.
             this.vIEWPOSTSTableAdapter.Fill(this.viewPosts.VIEWPOSTS);
+
+       
 
         }
 
@@ -64,6 +71,32 @@ namespace PostITTDB
             frmUpdateStatus updateStatus = new frmUpdateStatus();
             this.Hide();
             updateStatus.Show();
+        }
+
+        private void btnRank_Click(object sender, EventArgs e)
+        {
+            int selectedrowindex = vIEWPOSTSDataGridView.SelectedCells[0].RowIndex;
+
+            DataGridViewRow selectedRow = vIEWPOSTSDataGridView.Rows[selectedrowindex];
+
+            //Get selected cells from row selected
+            String selectedPostID = Convert.ToString(selectedRow.Cells[0].Value);
+            int selectedPost = Convert.ToInt32(selectedPostID);
+            using (var context = new PostITTEntities())
+            {
+                try
+                {
+                    context.RANKPOST(selectedPost);
+                    MessageBox.Show("Post has ben ranked!", "Ranked", MessageBoxButtons.OK, MessageBoxIcon.None);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.GetBaseException().ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
+                
+
+            }
+
         }
     }
 }

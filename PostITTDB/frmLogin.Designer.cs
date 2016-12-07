@@ -40,7 +40,7 @@
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(268, 282);
+            this.btnRegister.Location = new System.Drawing.Point(268, 297);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(131, 45);
             this.btnRegister.TabIndex = 42;

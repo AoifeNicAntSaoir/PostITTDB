@@ -12,3 +12,17 @@ C:\Users\seamus\Desktop\PostITTDB\PostITTDB\bin\Debug\EntityFramework.xml
 C:\Users\seamus\Desktop\PostITTDB\PostITTDB\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\seamus\Desktop\PostITTDB\PostITTDB\obj\Debug\PostITTDB.exe
 C:\Users\seamus\Desktop\PostITTDB\PostITTDB\obj\Debug\PostITTDB.pdb
+C:\Users\seamus\Desktop\PostITTDB\Phase 3\PostITTDB\PostITTDB\bin\Debug\PostITTDB.exe.config
+C:\Users\seamus\Desktop\PostITTDB\Phase 3\PostITTDB\PostITTDB\obj\Debug\PostITTDB.exe
+C:\Users\seamus\Desktop\PostITTDB\Phase 3\PostITTDB\PostITTDB\obj\Debug\PostITTDB.pdb
+C:\Users\seamus\Desktop\PostITTDB\Phase 3\PostITTDB\PostITTDB\bin\Debug\PostITTDB.exe
+C:\Users\seamus\Desktop\PostITTDB\Phase 3\PostITTDB\PostITTDB\bin\Debug\PostITTDB.pdb
+C:\Users\seamus\Desktop\PostITTDB\Phase 3\PostITTDB\PostITTDB\bin\Debug\EntityFramework.dll
+C:\Users\seamus\Desktop\PostITTDB\Phase 3\PostITTDB\PostITTDB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\seamus\Desktop\PostITTDB\Phase 3\PostITTDB\PostITTDB\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\seamus\Desktop\PostITTDB\Phase 3\PostITTDB\PostITTDB\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\seamus\Desktop\PostITTDB\Phase 3\PostITTDB\PostITTDB\bin\Debug\EntityFramework.xml
+C:\Users\seamus\Desktop\PostITTDB\Phase 3\PostITTDB\PostITTDB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\seamus\Desktop\PostITTDB\Phase 3\PostITTDB\PostITTDB\obj\Debug\PostITTDB.csprojResolveAssemblyReference.cache
+C:\Users\seamus\Desktop\PostITTDB\Phase 3\PostITTDB\PostITTDB\obj\Debug\PostITTDB.frmRegister.resources
+C:\Users\seamus\Desktop\PostITTDB\Phase 3\PostITTDB\PostITTDB\obj\Debug\PostITTDB.csproj.GenerateResource.Cache

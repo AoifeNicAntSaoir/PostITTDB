@@ -102,6 +102,9 @@
       <End Role="POSTTYPE" EntitySet="POSTTYPEs" />
       <End Role="POST" EntitySet="POSTs" />
     </AssociationSet>
+    <FunctionImport Name="RANKPOST">
+      <Parameter Name="P_ID" Mode="In" Type="Decimal" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="CATEGORY">
     <Key>

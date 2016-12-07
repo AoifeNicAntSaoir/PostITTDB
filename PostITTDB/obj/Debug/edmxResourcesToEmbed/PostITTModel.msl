@@ -105,5 +105,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="RANKPOST" FunctionName="PostITTModel.Store.RANKPOST" />
   </EntityContainerMapping>
 </Mapping>
