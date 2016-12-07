@@ -105,6 +105,7 @@
     <FunctionImport Name="RANKPOST">
       <Parameter Name="P_ID" Mode="In" Type="Decimal" />
     </FunctionImport>
+    <EntitySet Name="VIEWPOSTS" EntityType="PostITTModel.VIEWPOST" />
   </EntityContainer>
   <EntityType Name="CATEGORY">
     <Key>
@@ -327,4 +328,26 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="VIEWPOST">
+    <Key>
+      <PropertyRef Name="POSTID" />
+      <PropertyRef Name="POSTRANK" />
+      <PropertyRef Name="POSTTEXT" />
+      <PropertyRef Name="FIRSTNAME" />
+      <PropertyRef Name="SURNAME" />
+      <PropertyRef Name="POSTTYPEDESC" />
+      <PropertyRef Name="CATEGORYNAME" />
+      <PropertyRef Name="URL" />
+    </Key>
+    <Property Name="POSTID" Type="Int16" Nullable="false" />
+    <Property Name="PARENTID" Type="Int16" />
+    <Property Name="POSTRANK" Type="Int16" Nullable="false" />
+    <Property Name="POSTDATE" Type="DateTime" />
+    <Property Name="POSTTEXT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="FIRSTNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SURNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="POSTTYPEDESC" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CATEGORYNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="URL" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
 </Schema>

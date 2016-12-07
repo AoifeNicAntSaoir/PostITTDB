@@ -35,32 +35,37 @@
             this.viewProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deregisterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.frmUpdateStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vIEWPOSTSBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.vIEWPOSTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.postITTDS = new PostITTDB.PostITTDS();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.vIEWPOSTSBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.vIEWPOSTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.postITTDS = new PostITTDB.PostITTDS();
             this.viewpostsTableAdapter1 = new PostITTDB.PostITTDSTableAdapters.VIEWPOSTSTableAdapter();
             this.postTableAdapter1 = new PostITTDB.PostITTDSTableAdapters.POSTTableAdapter();
             this.tableAdapterManager = new PostITTDB.PostITTDSTableAdapters.TableAdapterManager();
             this.usertypeTableAdapter1 = new PostITTDB.PostITTDSTableAdapters.USERTYPETableAdapter();
-            this.frmUpdateStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblSurnameLog = new System.Windows.Forms.Label();
+            this.txtFirstname = new System.Windows.Forms.Label();
+            this.lblSurname = new System.Windows.Forms.Label();
+            this.lblFirstName = new System.Windows.Forms.Label();
+            this.dataGridProfilePosts = new System.Windows.Forms.DataGridView();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWPOSTSBindingNavigator)).BeginInit();
             this.vIEWPOSTSBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWPOSTSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postITTDS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridProfilePosts)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -71,7 +76,6 @@
             this.viewProfileToolStripMenuItem,
             this.viewUsersToolStripMenuItem,
             this.deregisterToolStripMenuItem,
-            this.changePasswordToolStripMenuItem,
             this.frmUpdateStatusToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -107,12 +111,12 @@
             this.deregisterToolStripMenuItem.Text = "Deregister";
             this.deregisterToolStripMenuItem.Click += new System.EventHandler(this.deregisterToolStripMenuItem_Click);
             // 
-            // changePasswordToolStripMenuItem
+            // frmUpdateStatusToolStripMenuItem
             // 
-            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
-            this.changePasswordToolStripMenuItem.Text = "Change Password";
-            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
+            this.frmUpdateStatusToolStripMenuItem.Name = "frmUpdateStatusToolStripMenuItem";
+            this.frmUpdateStatusToolStripMenuItem.Size = new System.Drawing.Size(114, 24);
+            this.frmUpdateStatusToolStripMenuItem.Text = "Update Status";
+            this.frmUpdateStatusToolStripMenuItem.Click += new System.EventHandler(this.frmUpdateStatusToolStripMenuItem_Click);
             // 
             // vIEWPOSTSBindingNavigator
             // 
@@ -144,6 +148,41 @@
             this.vIEWPOSTSBindingNavigator.Size = new System.Drawing.Size(1046, 27);
             this.vIEWPOSTSBindingNavigator.TabIndex = 51;
             this.vIEWPOSTSBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // vIEWPOSTSBindingSource
+            // 
+            this.vIEWPOSTSBindingSource.DataMember = "VIEWPOSTS";
+            this.vIEWPOSTSBindingSource.DataSource = this.postITTDS;
+            // 
+            // postITTDS
+            // 
+            this.postITTDS.DataSetName = "PostITTDS";
+            this.postITTDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -177,16 +216,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
@@ -209,26 +241,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // vIEWPOSTSBindingNavigatorSaveItem
             // 
@@ -238,16 +252,6 @@
             this.vIEWPOSTSBindingNavigatorSaveItem.Name = "vIEWPOSTSBindingNavigatorSaveItem";
             this.vIEWPOSTSBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.vIEWPOSTSBindingNavigatorSaveItem.Text = "Save Data";
-            // 
-            // vIEWPOSTSBindingSource
-            // 
-            this.vIEWPOSTSBindingSource.DataMember = "VIEWPOSTS";
-            this.vIEWPOSTSBindingSource.DataSource = this.postITTDS;
-            // 
-            // postITTDS
-            // 
-            this.postITTDS.DataSetName = "PostITTDS";
-            this.postITTDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // viewpostsTableAdapter1
             // 
@@ -277,22 +281,68 @@
             // 
             this.usertypeTableAdapter1.ClearBeforeFill = true;
             // 
-            // frmUpdateStatusToolStripMenuItem
+            // lblSurnameLog
             // 
-            this.frmUpdateStatusToolStripMenuItem.Name = "frmUpdateStatusToolStripMenuItem";
-            this.frmUpdateStatusToolStripMenuItem.Size = new System.Drawing.Size(114, 24);
-            this.frmUpdateStatusToolStripMenuItem.Text = "Update Status";
-            this.frmUpdateStatusToolStripMenuItem.Click += new System.EventHandler(this.frmUpdateStatusToolStripMenuItem_Click);
+            this.lblSurnameLog.AutoSize = true;
+            this.lblSurnameLog.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurnameLog.Location = new System.Drawing.Point(194, 141);
+            this.lblSurnameLog.Name = "lblSurnameLog";
+            this.lblSurnameLog.Size = new System.Drawing.Size(0, 25);
+            this.lblSurnameLog.TabIndex = 58;
+            // 
+            // txtFirstname
+            // 
+            this.txtFirstname.AutoSize = true;
+            this.txtFirstname.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstname.Location = new System.Drawing.Point(192, 97);
+            this.txtFirstname.Name = "txtFirstname";
+            this.txtFirstname.Size = new System.Drawing.Size(0, 25);
+            this.txtFirstname.TabIndex = 57;
+            // 
+            // lblSurname
+            // 
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurname.Location = new System.Drawing.Point(64, 133);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(113, 25);
+            this.lblSurname.TabIndex = 56;
+            this.lblSurname.Text = "Surname:";
+            // 
+            // lblFirstName
+            // 
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.Location = new System.Drawing.Point(55, 97);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(131, 25);
+            this.lblFirstName.TabIndex = 55;
+            this.lblFirstName.Text = "First Name:";
+            // 
+            // dataGridProfilePosts
+            // 
+            this.dataGridProfilePosts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridProfilePosts.Location = new System.Drawing.Point(88, 214);
+            this.dataGridProfilePosts.Name = "dataGridProfilePosts";
+            this.dataGridProfilePosts.RowTemplate.Height = 24;
+            this.dataGridProfilePosts.Size = new System.Drawing.Size(843, 150);
+            this.dataGridProfilePosts.TabIndex = 59;
             // 
             // frmViewProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1046, 482);
+            this.Controls.Add(this.dataGridProfilePosts);
+            this.Controls.Add(this.lblSurnameLog);
+            this.Controls.Add(this.txtFirstname);
+            this.Controls.Add(this.lblSurname);
+            this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.vIEWPOSTSBindingNavigator);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmViewProfile";
             this.Text = "frmViewProfile";
+            this.Load += new System.EventHandler(this.frmViewProfile_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWPOSTSBindingNavigator)).EndInit();
@@ -300,6 +350,7 @@
             this.vIEWPOSTSBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWPOSTSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.postITTDS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridProfilePosts)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,7 +363,6 @@
         private System.Windows.Forms.ToolStripMenuItem viewProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewUsersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deregisterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private PostITTDSTableAdapters.VIEWPOSTSTableAdapter viewpostsTableAdapter1;
         private PostITTDSTableAdapters.POSTTableAdapter postTableAdapter1;
         private PostITTDS postITTDS;
@@ -333,5 +383,10 @@
         private System.Windows.Forms.ToolStripButton vIEWPOSTSBindingNavigatorSaveItem;
         private PostITTDSTableAdapters.USERTYPETableAdapter usertypeTableAdapter1;
         private System.Windows.Forms.ToolStripMenuItem frmUpdateStatusToolStripMenuItem;
+        private System.Windows.Forms.Label lblSurnameLog;
+        private System.Windows.Forms.Label txtFirstname;
+        private System.Windows.Forms.Label lblSurname;
+        private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.DataGridView dataGridProfilePosts;
     }
 }

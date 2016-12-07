@@ -28,9 +28,9 @@ namespace PostITTDB
 
         private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmViewUsers viewProf = new frmViewUsers();
+            frmViewProfile prof = new frmViewProfile();
             this.Hide();
-            viewProf.Show();
+            prof.Show();
         }
 
         private void viewUsersToolStripMenuItem_Click(object sender, EventArgs e)

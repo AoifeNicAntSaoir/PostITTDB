@@ -20,6 +20,10 @@ namespace PostITTDB
 
         private void viewUsers_Load(object sender, EventArgs e)
         {
+
+            txtFirstname.Text = CurrentLoginUser.firstname;
+            lblSurnameLog.Text = CurrentLoginUser.surname;
+
             // TODO: This line of code loads data into the 'postITTDS.VIEWUSER' table. You can move, or remove it, as needed.
             this.vIEWUSERTableAdapter.Fill(this.postITTDS.VIEWUSER);
 
@@ -37,9 +41,9 @@ namespace PostITTDB
 
         private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmViewProfile viewProf = new frmViewProfile();
+            frmViewProfile viewProfile = new frmViewProfile();
             this.Hide();
-            viewProf.Show();
+            viewProfile.Show();
         }
 
         private void viewUsersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -67,16 +71,9 @@ namespace PostITTDB
         {
 
         }
-
-     
-        private void btnSearch_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void vIEWUSERPROFILEBindingNavigator_RefreshItems(object sender, EventArgs e)
         {
-
+          
         }
 
         private void updateStatusToolStripMenuItem_Click(object sender, EventArgs e)

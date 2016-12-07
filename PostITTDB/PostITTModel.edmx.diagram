@@ -24,6 +24,7 @@
         <AssociationConnector Association="PostITTModel.FK_PARENTID_P" />
         <AssociationConnector Association="PostITTModel.FK_POSTID_R" />
         <AssociationConnector Association="PostITTModel.FK_POSTTYPEID_P" />
+        <EntityTypeShape EntityType="PostITTModel.VIEWPOST" Width="1.5" PointX="7.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

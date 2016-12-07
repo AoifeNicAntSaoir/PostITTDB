@@ -81,6 +81,30 @@
     <Property Name="USERTYPEID" Type="number" Precision="5" Scale="0" Nullable="false" />
     <Property Name="TYPEDESCRIPTION" Type="varchar2" MaxLength="1" Nullable="false" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'AOIFESAYERS.VIEWPOSTS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VIEWPOSTS">
+    <Key>
+      <PropertyRef Name="POSTID" />
+      <PropertyRef Name="POSTRANK" />
+      <PropertyRef Name="POSTTEXT" />
+      <PropertyRef Name="FIRSTNAME" />
+      <PropertyRef Name="SURNAME" />
+      <PropertyRef Name="POSTTYPEDESC" />
+      <PropertyRef Name="CATEGORYNAME" />
+      <PropertyRef Name="URL" />
+    </Key>
+    <Property Name="POSTID" Type="number" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="PARENTID" Type="number" Precision="5" Scale="0" />
+    <Property Name="POSTRANK" Type="number" Precision="5" Scale="0" Nullable="false" />
+    <Property Name="POSTDATE" Type="date" />
+    <Property Name="POSTTEXT" Type="varchar2" MaxLength="50" Nullable="false" />
+    <Property Name="FIRSTNAME" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="SURNAME" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="POSTTYPEDESC" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="CATEGORYNAME" Type="varchar2" MaxLength="20" Nullable="false" />
+    <Property Name="URL" Type="varchar2" MaxLength="40" Nullable="false" />
+  </EntityType>
   <Association Name="FK_CATEGORYID_P">
     <End Role="CATEGORY" Type="Self.CATEGORY" Multiplicity="0..1" />
     <End Role="POST" Type="Self.POST" Multiplicity="*" />
@@ -260,6 +284,20 @@
     <EntitySet Name="RANK" EntityType="Self.RANK" Schema="AOIFESAYERS" store:Type="Tables" />
     <EntitySet Name="TAG" EntityType="Self.TAG" Schema="AOIFESAYERS" store:Type="Tables" />
     <EntitySet Name="USERTYPE" EntityType="Self.USERTYPE" Schema="AOIFESAYERS" store:Type="Tables" />
+    <EntitySet Name="VIEWPOSTS" EntityType="Self.VIEWPOSTS" store:Type="Views" store:Schema="AOIFESAYERS">
+      <DefiningQuery>SELECT 
+"VIEWPOSTS"."POSTID" AS "POSTID", 
+"VIEWPOSTS"."PARENTID" AS "PARENTID", 
+"VIEWPOSTS"."POSTRANK" AS "POSTRANK", 
+"VIEWPOSTS"."POSTDATE" AS "POSTDATE", 
+"VIEWPOSTS"."POSTTEXT" AS "POSTTEXT", 
+"VIEWPOSTS"."FIRSTNAME" AS "FIRSTNAME", 
+"VIEWPOSTS"."SURNAME" AS "SURNAME", 
+"VIEWPOSTS"."POSTTYPEDESC" AS "POSTTYPEDESC", 
+"VIEWPOSTS"."CATEGORYNAME" AS "CATEGORYNAME", 
+"VIEWPOSTS"."URL" AS "URL"
+FROM "AOIFESAYERS"."VIEWPOSTS" "VIEWPOSTS"</DefiningQuery>
+    </EntitySet>
     <AssociationSet Name="FK_CATEGORYID_P" Association="Self.FK_CATEGORYID_P">
       <End Role="CATEGORY" EntitySet="CATEGORY" />
       <End Role="POST" EntitySet="POST" />

@@ -20,9 +20,9 @@ namespace PostITTDB {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("viewPosts")]
+    [global::System.Xml.Serialization.XmlRootAttribute("ViewPostsDS")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class viewPosts : global::System.Data.DataSet {
+    public partial class ViewPostsDS : global::System.Data.DataSet {
         
         private VIEWPOSTSDataTable tableVIEWPOSTS;
         
@@ -30,7 +30,7 @@ namespace PostITTDB {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public viewPosts() {
+        public ViewPostsDS() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace PostITTDB {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected viewPosts(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected ViewPostsDS(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace PostITTDB {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            viewPosts cln = ((viewPosts)(base.Clone()));
+            ViewPostsDS cln = ((ViewPostsDS)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace PostITTDB {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "viewPosts";
+            this.DataSetName = "ViewPostsDS";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/viewPosts.xsd";
+            this.Namespace = "http://tempuri.org/ViewPostsDS.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableVIEWPOSTS = new VIEWPOSTSDataTable();
@@ -225,7 +225,7 @@ namespace PostITTDB {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            viewPosts ds = new viewPosts();
+            ViewPostsDS ds = new ViewPostsDS();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -283,6 +283,8 @@ namespace PostITTDB {
             
             private global::System.Data.DataColumn columnPARENTID;
             
+            private global::System.Data.DataColumn columnPOSTRANK;
+            
             private global::System.Data.DataColumn columnPOSTDATE;
             
             private global::System.Data.DataColumn columnPOSTTEXT;
@@ -296,8 +298,6 @@ namespace PostITTDB {
             private global::System.Data.DataColumn columnCATEGORYNAME;
             
             private global::System.Data.DataColumn columnURL;
-            
-            private global::System.Data.DataColumn columnPOSTRANK;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -345,6 +345,14 @@ namespace PostITTDB {
             public global::System.Data.DataColumn PARENTIDColumn {
                 get {
                     return this.columnPARENTID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn POSTRANKColumn {
+                get {
+                    return this.columnPOSTRANK;
                 }
             }
             
@@ -406,14 +414,6 @@ namespace PostITTDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn POSTRANKColumn {
-                get {
-                    return this.columnPOSTRANK;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -449,19 +449,19 @@ namespace PostITTDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public VIEWPOSTSRow AddVIEWPOSTSRow(int POSTID, int PARENTID, System.DateTime POSTDATE, string POSTTEXT, string FIRSTNAME, string SURNAME, string POSTTYPEDESC, string CATEGORYNAME, string URL, int POSTRANK) {
+            public VIEWPOSTSRow AddVIEWPOSTSRow(int POSTID, int PARENTID, int POSTRANK, System.DateTime POSTDATE, string POSTTEXT, string FIRSTNAME, string SURNAME, string POSTTYPEDESC, string CATEGORYNAME, string URL) {
                 VIEWPOSTSRow rowVIEWPOSTSRow = ((VIEWPOSTSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         POSTID,
                         PARENTID,
+                        POSTRANK,
                         POSTDATE,
                         POSTTEXT,
                         FIRSTNAME,
                         SURNAME,
                         POSTTYPEDESC,
                         CATEGORYNAME,
-                        URL,
-                        POSTRANK};
+                        URL};
                 rowVIEWPOSTSRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowVIEWPOSTSRow);
                 return rowVIEWPOSTSRow;
@@ -486,6 +486,7 @@ namespace PostITTDB {
             internal void InitVars() {
                 this.columnPOSTID = base.Columns["POSTID"];
                 this.columnPARENTID = base.Columns["PARENTID"];
+                this.columnPOSTRANK = base.Columns["POSTRANK"];
                 this.columnPOSTDATE = base.Columns["POSTDATE"];
                 this.columnPOSTTEXT = base.Columns["POSTTEXT"];
                 this.columnFIRSTNAME = base.Columns["FIRSTNAME"];
@@ -493,7 +494,6 @@ namespace PostITTDB {
                 this.columnPOSTTYPEDESC = base.Columns["POSTTYPEDESC"];
                 this.columnCATEGORYNAME = base.Columns["CATEGORYNAME"];
                 this.columnURL = base.Columns["URL"];
-                this.columnPOSTRANK = base.Columns["POSTRANK"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -503,6 +503,8 @@ namespace PostITTDB {
                 base.Columns.Add(this.columnPOSTID);
                 this.columnPARENTID = new global::System.Data.DataColumn("PARENTID", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPARENTID);
+                this.columnPOSTRANK = new global::System.Data.DataColumn("POSTRANK", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPOSTRANK);
                 this.columnPOSTDATE = new global::System.Data.DataColumn("POSTDATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPOSTDATE);
                 this.columnPOSTTEXT = new global::System.Data.DataColumn("POSTTEXT", typeof(string), null, global::System.Data.MappingType.Element);
@@ -517,9 +519,8 @@ namespace PostITTDB {
                 base.Columns.Add(this.columnCATEGORYNAME);
                 this.columnURL = new global::System.Data.DataColumn("URL", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnURL);
-                this.columnPOSTRANK = new global::System.Data.DataColumn("POSTRANK", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPOSTRANK);
                 this.columnPOSTID.AllowDBNull = false;
+                this.columnPOSTRANK.AllowDBNull = false;
                 this.columnPOSTTEXT.AllowDBNull = false;
                 this.columnPOSTTEXT.MaxLength = 50;
                 this.columnFIRSTNAME.AllowDBNull = false;
@@ -532,7 +533,6 @@ namespace PostITTDB {
                 this.columnCATEGORYNAME.MaxLength = 20;
                 this.columnURL.AllowDBNull = false;
                 this.columnURL.MaxLength = 40;
-                this.columnPOSTRANK.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -600,7 +600,7 @@ namespace PostITTDB {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                viewPosts ds = new viewPosts();
+                ViewPostsDS ds = new ViewPostsDS();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -702,6 +702,17 @@ namespace PostITTDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int POSTRANK {
+                get {
+                    return ((int)(this[this.tableVIEWPOSTS.POSTRANKColumn]));
+                }
+                set {
+                    this[this.tableVIEWPOSTS.POSTRANKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public System.DateTime POSTDATE {
                 get {
                     try {
@@ -784,17 +795,6 @@ namespace PostITTDB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int POSTRANK {
-                get {
-                    return ((int)(this[this.tableVIEWPOSTS.POSTRANKColumn]));
-                }
-                set {
-                    this[this.tableVIEWPOSTS.POSTRANKColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsPARENTIDNull() {
                 return this.IsNull(this.tableVIEWPOSTS.PARENTIDColumn);
             }
@@ -853,7 +853,7 @@ namespace PostITTDB {
         }
     }
 }
-namespace PostITTDB.viewPostsTableAdapters {
+namespace PostITTDB.ViewPostsDSTableAdapters {
     
     
     /// <summary>
@@ -979,6 +979,7 @@ namespace PostITTDB.viewPostsTableAdapters {
             tableMapping.DataSetTable = "VIEWPOSTS";
             tableMapping.ColumnMappings.Add("POSTID", "POSTID");
             tableMapping.ColumnMappings.Add("PARENTID", "PARENTID");
+            tableMapping.ColumnMappings.Add("POSTRANK", "POSTRANK");
             tableMapping.ColumnMappings.Add("POSTDATE", "POSTDATE");
             tableMapping.ColumnMappings.Add("POSTTEXT", "POSTTEXT");
             tableMapping.ColumnMappings.Add("FIRSTNAME", "FIRSTNAME");
@@ -986,7 +987,6 @@ namespace PostITTDB.viewPostsTableAdapters {
             tableMapping.ColumnMappings.Add("POSTTYPEDESC", "POSTTYPEDESC");
             tableMapping.ColumnMappings.Add("CATEGORYNAME", "CATEGORYNAME");
             tableMapping.ColumnMappings.Add("URL", "URL");
-            tableMapping.ColumnMappings.Add("POSTRANK", "POSTRANK");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1003,7 +1003,7 @@ namespace PostITTDB.viewPostsTableAdapters {
             this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT POSTID, PARENTID, postrank, POSTDATE, POSTTEXT, FIRSTNAME, SURNAME, POSTTY" +
+            this._commandCollection[0].CommandText = "SELECT POSTID, PARENTID, POSTRANK, POSTDATE, POSTTEXT, FIRSTNAME, SURNAME, POSTTY" +
                 "PEDESC, CATEGORYNAME, URL FROM AOIFESAYERS.VIEWPOSTS";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
@@ -1012,7 +1012,7 @@ namespace PostITTDB.viewPostsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(viewPosts.VIEWPOSTSDataTable dataTable) {
+        public virtual int Fill(ViewPostsDS.VIEWPOSTSDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1025,9 +1025,9 @@ namespace PostITTDB.viewPostsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual viewPosts.VIEWPOSTSDataTable GetData() {
+        public virtual ViewPostsDS.VIEWPOSTSDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            viewPosts.VIEWPOSTSDataTable dataTable = new viewPosts.VIEWPOSTSDataTable();
+            ViewPostsDS.VIEWPOSTSDataTable dataTable = new ViewPostsDS.VIEWPOSTSDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1101,7 +1101,7 @@ namespace PostITTDB.viewPostsTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(viewPosts dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(ViewPostsDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1111,7 +1111,7 @@ namespace PostITTDB.viewPostsTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(viewPosts dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(ViewPostsDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1121,7 +1121,7 @@ namespace PostITTDB.viewPostsTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(viewPosts dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(ViewPostsDS dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1155,7 +1155,7 @@ namespace PostITTDB.viewPostsTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(viewPosts dataSet) {
+        public virtual int UpdateAll(ViewPostsDS dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

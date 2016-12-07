@@ -63,9 +63,9 @@ namespace PostITTDB
 
         private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmViewProfile profile = new frmViewProfile();
+            frmViewProfile prof = new frmViewProfile();
             this.Hide();
-            profile.Show();
+            prof.Show();
         }
 
         private void viewUsersToolStripMenuItem_Click(object sender, EventArgs e)

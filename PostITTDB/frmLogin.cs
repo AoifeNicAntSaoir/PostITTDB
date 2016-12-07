@@ -76,9 +76,11 @@ namespace PostITTDB
                     {
                         CurrentLoginUser.userid = u.ToString();
                     }
+                                 
 
-               
-                    
+
+
+
 
                     frmNewsfeed newsFeed = new frmNewsfeed();
                     this.Hide();

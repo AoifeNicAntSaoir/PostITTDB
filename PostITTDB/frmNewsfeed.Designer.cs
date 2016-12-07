@@ -54,6 +54,13 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.vIEWPOSTSBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.btnRank = new System.Windows.Forms.Button();
+            this.lblSurname = new System.Windows.Forms.Label();
+            this.lblFirstName = new System.Windows.Forms.Label();
+            this.txtFirstname = new System.Windows.Forms.Label();
+            this.lblSurnameLog = new System.Windows.Forms.Label();
+            this.viewPostsDS = new PostITTDB.ViewPostsDS();
+            this.viewPostsDSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vIEWPOSTSDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,16 +71,14 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnRank = new System.Windows.Forms.Button();
-            this.lblSurname = new System.Windows.Forms.Label();
-            this.lblFirstName = new System.Windows.Forms.Label();
-            this.txtFirstname = new System.Windows.Forms.Label();
-            this.lblSurnameLog = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.viewPosts)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWPOSTSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWPOSTSBindingNavigator)).BeginInit();
             this.vIEWPOSTSBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.viewPostsDS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewPostsDSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWPOSTSDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -280,10 +285,67 @@
             this.vIEWPOSTSBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
             this.vIEWPOSTSBindingNavigatorSaveItem.Text = "Save Data";
             // 
+            // btnRank
+            // 
+            this.btnRank.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRank.Location = new System.Drawing.Point(471, 386);
+            this.btnRank.Name = "btnRank";
+            this.btnRank.Size = new System.Drawing.Size(170, 63);
+            this.btnRank.TabIndex = 50;
+            this.btnRank.Text = "Rank Post";
+            this.btnRank.UseVisualStyleBackColor = true;
+            this.btnRank.Click += new System.EventHandler(this.btnRank_Click);
+            // 
+            // lblSurname
+            // 
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurname.Location = new System.Drawing.Point(79, 109);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(113, 25);
+            this.lblSurname.TabIndex = 52;
+            this.lblSurname.Text = "Surname:";
+            // 
+            // lblFirstName
+            // 
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.Location = new System.Drawing.Point(70, 73);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(131, 25);
+            this.lblFirstName.TabIndex = 51;
+            this.lblFirstName.Text = "First Name:";
+            // 
+            // txtFirstname
+            // 
+            this.txtFirstname.AutoSize = true;
+            this.txtFirstname.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstname.Location = new System.Drawing.Point(207, 73);
+            this.txtFirstname.Name = "txtFirstname";
+            this.txtFirstname.Size = new System.Drawing.Size(0, 25);
+            this.txtFirstname.TabIndex = 53;
+            // 
+            // lblSurnameLog
+            // 
+            this.lblSurnameLog.AutoSize = true;
+            this.lblSurnameLog.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurnameLog.Location = new System.Drawing.Point(209, 117);
+            this.lblSurnameLog.Name = "lblSurnameLog";
+            this.lblSurnameLog.Size = new System.Drawing.Size(0, 25);
+            this.lblSurnameLog.TabIndex = 54;
+            // 
+            // viewPostsDS
+            // 
+            this.viewPostsDS.DataSetName = "ViewPostsDS";
+            this.viewPostsDS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // viewPostsDSBindingSource
+            // 
+            this.viewPostsDSBindingSource.DataSource = this.viewPostsDS;
+            this.viewPostsDSBindingSource.Position = 0;
+            // 
             // vIEWPOSTSDataGridView
             // 
-            this.vIEWPOSTSDataGridView.AllowUserToAddRows = false;
-            this.vIEWPOSTSDataGridView.AllowUserToDeleteRows = false;
             this.vIEWPOSTSDataGridView.AutoGenerateColumns = false;
             this.vIEWPOSTSDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.vIEWPOSTSDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -295,15 +357,15 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9});
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10});
             this.vIEWPOSTSDataGridView.DataSource = this.vIEWPOSTSBindingSource;
-            this.vIEWPOSTSDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.vIEWPOSTSDataGridView.Location = new System.Drawing.Point(23, 160);
+            this.vIEWPOSTSDataGridView.Location = new System.Drawing.Point(40, 160);
             this.vIEWPOSTSDataGridView.Name = "vIEWPOSTSDataGridView";
             this.vIEWPOSTSDataGridView.RowTemplate.Height = 24;
             this.vIEWPOSTSDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.vIEWPOSTSDataGridView.Size = new System.Drawing.Size(1237, 220);
-            this.vIEWPOSTSDataGridView.TabIndex = 49;
+            this.vIEWPOSTSDataGridView.Size = new System.Drawing.Size(1036, 220);
+            this.vIEWPOSTSDataGridView.TabIndex = 54;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -359,66 +421,23 @@
             this.dataGridViewTextBoxColumn9.HeaderText = "URL";
             this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
-            // btnRank
+            // dataGridViewTextBoxColumn10
             // 
-            this.btnRank.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRank.Location = new System.Drawing.Point(471, 386);
-            this.btnRank.Name = "btnRank";
-            this.btnRank.Size = new System.Drawing.Size(170, 63);
-            this.btnRank.TabIndex = 50;
-            this.btnRank.Text = "Rank Post";
-            this.btnRank.UseVisualStyleBackColor = true;
-            this.btnRank.Click += new System.EventHandler(this.btnRank_Click);
-            // 
-            // lblSurname
-            // 
-            this.lblSurname.AutoSize = true;
-            this.lblSurname.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSurname.Location = new System.Drawing.Point(79, 109);
-            this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(113, 25);
-            this.lblSurname.TabIndex = 52;
-            this.lblSurname.Text = "Surname:";
-            // 
-            // lblFirstName
-            // 
-            this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.Location = new System.Drawing.Point(70, 73);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(131, 25);
-            this.lblFirstName.TabIndex = 51;
-            this.lblFirstName.Text = "First Name:";
-            // 
-            // txtFirstname
-            // 
-            this.txtFirstname.AutoSize = true;
-            this.txtFirstname.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstname.Location = new System.Drawing.Point(207, 73);
-            this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.Size = new System.Drawing.Size(0, 25);
-            this.txtFirstname.TabIndex = 53;
-            // 
-            // lblSurnameLog
-            // 
-            this.lblSurnameLog.AutoSize = true;
-            this.lblSurnameLog.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSurnameLog.Location = new System.Drawing.Point(209, 117);
-            this.lblSurnameLog.Name = "lblSurnameLog";
-            this.lblSurnameLog.Size = new System.Drawing.Size(0, 25);
-            this.lblSurnameLog.TabIndex = 54;
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "POSTRANK";
+            this.dataGridViewTextBoxColumn10.HeaderText = "POSTRANK";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
             // frmNewsfeed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1272, 524);
+            this.Controls.Add(this.vIEWPOSTSDataGridView);
             this.Controls.Add(this.lblSurnameLog);
             this.Controls.Add(this.txtFirstname);
             this.Controls.Add(this.lblSurname);
             this.Controls.Add(this.lblFirstName);
             this.Controls.Add(this.btnRank);
-            this.Controls.Add(this.vIEWPOSTSDataGridView);
             this.Controls.Add(this.vIEWPOSTSBindingNavigator);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmNewsfeed";
@@ -431,6 +450,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.vIEWPOSTSBindingNavigator)).EndInit();
             this.vIEWPOSTSBindingNavigator.ResumeLayout(false);
             this.vIEWPOSTSBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.viewPostsDS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.viewPostsDSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWPOSTSDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -462,6 +483,14 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private System.Windows.Forms.ToolStripButton vIEWPOSTSBindingNavigatorSaveItem;
+        private System.Windows.Forms.ToolStripMenuItem updateStatusToolStripMenuItem;
+        private System.Windows.Forms.Button btnRank;
+        private System.Windows.Forms.Label lblSurname;
+        private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.Label txtFirstname;
+        private System.Windows.Forms.Label lblSurnameLog;
+        private System.Windows.Forms.BindingSource viewPostsDSBindingSource;
+        private ViewPostsDS viewPostsDS;
         private System.Windows.Forms.DataGridView vIEWPOSTSDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -472,11 +501,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.ToolStripMenuItem updateStatusToolStripMenuItem;
-        private System.Windows.Forms.Button btnRank;
-        private System.Windows.Forms.Label lblSurname;
-        private System.Windows.Forms.Label lblFirstName;
-        private System.Windows.Forms.Label txtFirstname;
-        private System.Windows.Forms.Label lblSurnameLog;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
     }
 }

@@ -26,9 +26,9 @@ namespace PostITTDB
 
         private void viewProfileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmViewProfile prof = new frmViewProfile();
+            frmViewProfile viewProfile = new frmViewProfile();
             this.Hide();
-            prof.Show();
+            viewProfile.Show();
         }
 
         private void viewUsersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -57,6 +57,25 @@ namespace PostITTDB
             frmUpdateStatus updateStatus = new frmUpdateStatus();
             this.Hide();
             updateStatus.Show();
+        }
+
+        private void frmViewProfile_Load(object sender, EventArgs e)
+        {
+            txtFirstname.Text = CurrentLoginUser.firstname;
+            lblSurnameLog.Text = CurrentLoginUser.surname;
+
+
+            using(var context = new PostITTDS())
+            {
+                BindingSource bindingSource1 = new BindingSource();
+                bindingSource1.DataSource = (from r in context.VIEWUSERPOSTS
+                                             where (r.USERID == Convert.ToInt16(CurrentLoginUser.userid))
+                                             select new { r.USERID,r.POSTTEXT }).ToList();
+
+                dataGridProfilePosts.DataSource = bindingSource1;
+     
+            }
+            
         }
     }
 }

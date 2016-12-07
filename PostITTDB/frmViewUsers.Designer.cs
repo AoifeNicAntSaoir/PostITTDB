@@ -54,12 +54,7 @@
             this.viewProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deregisterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnSearch = new System.Windows.Forms.Button();
-            this.txtSurname = new System.Windows.Forms.TextBox();
-            this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.lblSurname = new System.Windows.Forms.Label();
-            this.lblFirstName = new System.Windows.Forms.Label();
+            this.updateStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vIEWUSERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vIEWUSERTableAdapter = new PostITTDB.PostITTDSTableAdapters.VIEWUSERTableAdapter();
             this.vIEWUSERDataGridView = new System.Windows.Forms.DataGridView();
@@ -67,7 +62,10 @@
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.updateStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblSurnameLog = new System.Windows.Forms.Label();
+            this.txtFirstname = new System.Windows.Forms.Label();
+            this.lblSurname = new System.Windows.Forms.Label();
+            this.lblFirstName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.postITTDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWUSERPROFILEBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vIEWUSERPROFILEBindingNavigator)).BeginInit();
@@ -252,7 +250,6 @@
             this.viewProfileToolStripMenuItem,
             this.viewUsersToolStripMenuItem,
             this.deregisterToolStripMenuItem,
-            this.changePasswordToolStripMenuItem,
             this.updateStatusToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 27);
             this.menuStrip1.Name = "menuStrip1";
@@ -288,61 +285,12 @@
             this.deregisterToolStripMenuItem.Text = "Deregister";
             this.deregisterToolStripMenuItem.Click += new System.EventHandler(this.deregisterToolStripMenuItem_Click);
             // 
-            // changePasswordToolStripMenuItem
+            // updateStatusToolStripMenuItem
             // 
-            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
-            this.changePasswordToolStripMenuItem.Text = "Change Password";
-            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(533, 190);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(131, 45);
-            this.btnSearch.TabIndex = 56;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click_1);
-            // 
-            // txtSurname
-            // 
-            this.txtSurname.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSurname.Location = new System.Drawing.Point(533, 139);
-            this.txtSurname.MaxLength = 20;
-            this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(268, 32);
-            this.txtSurname.TabIndex = 55;
-            // 
-            // txtFirstName
-            // 
-            this.txtFirstName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFirstName.Location = new System.Drawing.Point(533, 82);
-            this.txtFirstName.MaxLength = 20;
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(268, 32);
-            this.txtFirstName.TabIndex = 54;
-            // 
-            // lblSurname
-            // 
-            this.lblSurname.AutoSize = true;
-            this.lblSurname.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSurname.Location = new System.Drawing.Point(382, 142);
-            this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(113, 25);
-            this.lblSurname.TabIndex = 53;
-            this.lblSurname.Text = "Surname:";
-            // 
-            // lblFirstName
-            // 
-            this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.Location = new System.Drawing.Point(364, 89);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(131, 25);
-            this.lblFirstName.TabIndex = 52;
-            this.lblFirstName.Text = "First Name:";
+            this.updateStatusToolStripMenuItem.Name = "updateStatusToolStripMenuItem";
+            this.updateStatusToolStripMenuItem.Size = new System.Drawing.Size(114, 24);
+            this.updateStatusToolStripMenuItem.Text = "Update Status";
+            this.updateStatusToolStripMenuItem.Click += new System.EventHandler(this.updateStatusToolStripMenuItem_Click);
             // 
             // vIEWUSERBindingSource
             // 
@@ -393,24 +341,54 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "SCORE";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // updateStatusToolStripMenuItem
+            // lblSurnameLog
             // 
-            this.updateStatusToolStripMenuItem.Name = "updateStatusToolStripMenuItem";
-            this.updateStatusToolStripMenuItem.Size = new System.Drawing.Size(114, 24);
-            this.updateStatusToolStripMenuItem.Text = "Update Status";
-            this.updateStatusToolStripMenuItem.Click += new System.EventHandler(this.updateStatusToolStripMenuItem_Click);
+            this.lblSurnameLog.AutoSize = true;
+            this.lblSurnameLog.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurnameLog.Location = new System.Drawing.Point(350, 129);
+            this.lblSurnameLog.Name = "lblSurnameLog";
+            this.lblSurnameLog.Size = new System.Drawing.Size(0, 25);
+            this.lblSurnameLog.TabIndex = 62;
+            // 
+            // txtFirstname
+            // 
+            this.txtFirstname.AutoSize = true;
+            this.txtFirstname.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstname.Location = new System.Drawing.Point(350, 93);
+            this.txtFirstname.Name = "txtFirstname";
+            this.txtFirstname.Size = new System.Drawing.Size(0, 25);
+            this.txtFirstname.TabIndex = 61;
+            // 
+            // lblSurname
+            // 
+            this.lblSurname.AutoSize = true;
+            this.lblSurname.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurname.Location = new System.Drawing.Point(222, 129);
+            this.lblSurname.Name = "lblSurname";
+            this.lblSurname.Size = new System.Drawing.Size(113, 25);
+            this.lblSurname.TabIndex = 60;
+            this.lblSurname.Text = "Surname:";
+            // 
+            // lblFirstName
+            // 
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.Location = new System.Drawing.Point(204, 93);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(131, 25);
+            this.lblFirstName.TabIndex = 59;
+            this.lblFirstName.Text = "First Name:";
             // 
             // frmViewUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1173, 565);
-            this.Controls.Add(this.vIEWUSERDataGridView);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.txtSurname);
-            this.Controls.Add(this.txtFirstName);
+            this.Controls.Add(this.lblSurnameLog);
+            this.Controls.Add(this.txtFirstname);
             this.Controls.Add(this.lblSurname);
             this.Controls.Add(this.lblFirstName);
+            this.Controls.Add(this.vIEWUSERDataGridView);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.vIEWUSERPROFILEBindingNavigator);
             this.Name = "frmViewUsers";
@@ -457,12 +435,6 @@
         private System.Windows.Forms.ToolStripMenuItem viewProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewUsersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deregisterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.TextBox txtSurname;
-        private System.Windows.Forms.TextBox txtFirstName;
-        private System.Windows.Forms.Label lblSurname;
-        private System.Windows.Forms.Label lblFirstName;
         private System.Windows.Forms.BindingSource vIEWUSERBindingSource;
         private PostITTDSTableAdapters.VIEWUSERTableAdapter vIEWUSERTableAdapter;
         private System.Windows.Forms.DataGridView vIEWUSERDataGridView;
@@ -471,5 +443,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.ToolStripMenuItem updateStatusToolStripMenuItem;
+        private System.Windows.Forms.Label lblSurnameLog;
+        private System.Windows.Forms.Label txtFirstname;
+        private System.Windows.Forms.Label lblSurname;
+        private System.Windows.Forms.Label lblFirstName;
     }
 }

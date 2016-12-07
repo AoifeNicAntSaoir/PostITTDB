@@ -176,6 +176,9 @@
     <Compile Include="USERTYPE.cs">
       <DependentUpon>PostITTModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="VIEWPOST.cs">
+      <DependentUpon>PostITTModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="viewPosts.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -186,6 +189,11 @@
     </Compile>
     <Compile Include="frmViewUsers.Designer.cs">
       <DependentUpon>frmViewUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPostsDS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewPostsDS.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -234,6 +242,17 @@
     </None>
     <None Include="viewPosts.xss">
       <DependentUpon>viewPosts.xsd</DependentUpon>
+    </None>
+    <None Include="ViewPostsDS.xsc">
+      <DependentUpon>ViewPostsDS.xsd</DependentUpon>
+    </None>
+    <None Include="ViewPostsDS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ViewPostsDS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ViewPostsDS.xss">
+      <DependentUpon>ViewPostsDS.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

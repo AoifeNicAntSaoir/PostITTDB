@@ -106,5 +106,21 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="RANKPOST" FunctionName="PostITTModel.Store.RANKPOST" />
+    <EntitySetMapping Name="VIEWPOSTS">
+      <EntityTypeMapping TypeName="PostITTModel.VIEWPOST">
+        <MappingFragment StoreEntitySet="VIEWPOSTS">
+          <ScalarProperty Name="URL" ColumnName="URL" />
+          <ScalarProperty Name="CATEGORYNAME" ColumnName="CATEGORYNAME" />
+          <ScalarProperty Name="POSTTYPEDESC" ColumnName="POSTTYPEDESC" />
+          <ScalarProperty Name="SURNAME" ColumnName="SURNAME" />
+          <ScalarProperty Name="FIRSTNAME" ColumnName="FIRSTNAME" />
+          <ScalarProperty Name="POSTTEXT" ColumnName="POSTTEXT" />
+          <ScalarProperty Name="POSTDATE" ColumnName="POSTDATE" />
+          <ScalarProperty Name="POSTRANK" ColumnName="POSTRANK" />
+          <ScalarProperty Name="PARENTID" ColumnName="PARENTID" />
+          <ScalarProperty Name="POSTID" ColumnName="POSTID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

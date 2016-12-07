@@ -36,6 +36,7 @@ namespace PostITTDB
         public virtual DbSet<RANK> RANKs { get; set; }
         public virtual DbSet<TAG> TAGs { get; set; }
         public virtual DbSet<USERTYPE> USERTYPEs { get; set; }
+        public virtual DbSet<VIEWPOST> VIEWPOSTS { get; set; }
     
         public virtual int ANSWERPOST()
         {
