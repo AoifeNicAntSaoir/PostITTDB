@@ -30,6 +30,9 @@ namespace PostITTDB
             // TODO: This line of code loads data into the 'postITTDS.VIEWUSERPROFILE' table. You can move, or remove it, as needed.
             this.vIEWUSERPROFILETableAdapter.Fill(this.postITTDS.VIEWUSERPROFILE);
 
+            vIEWUSERDataGridView.Update();
+            vIEWUSERDataGridView.Refresh();
+
         }
 
         private void newsfeedToolStripMenuItem_Click(object sender, EventArgs e)
@@ -60,17 +63,6 @@ namespace PostITTDB
             dereg.Show();
         }
 
-        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmChangePassword chgPass = new frmChangePassword();
-            this.Hide();
-            chgPass.Show();
-        }
-
-        private void vIEWUSERPROFILEDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
         private void vIEWUSERPROFILEBindingNavigator_RefreshItems(object sender, EventArgs e)
         {
           

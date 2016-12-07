@@ -35,7 +35,6 @@
             this.viewProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deregisterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewPosts = new PostITTDB.viewPosts();
             this.vIEWPOSTSBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -91,7 +90,6 @@
             this.viewProfileToolStripMenuItem,
             this.viewUsersToolStripMenuItem,
             this.deregisterToolStripMenuItem,
-            this.changePasswordToolStripMenuItem,
             this.updateStatusToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -126,13 +124,6 @@
             this.deregisterToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
             this.deregisterToolStripMenuItem.Text = "Deregister";
             this.deregisterToolStripMenuItem.Click += new System.EventHandler(this.deregisterToolStripMenuItem_Click);
-            // 
-            // changePasswordToolStripMenuItem
-            // 
-            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
-            this.changePasswordToolStripMenuItem.Text = "Change Password";
-            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // updateStatusToolStripMenuItem
             // 
@@ -288,13 +279,15 @@
             // 
             // btnRank
             // 
+            this.btnRank.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnRank.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRank.ForeColor = System.Drawing.Color.White;
             this.btnRank.Location = new System.Drawing.Point(471, 386);
             this.btnRank.Name = "btnRank";
             this.btnRank.Size = new System.Drawing.Size(170, 63);
             this.btnRank.TabIndex = 50;
             this.btnRank.Text = "Rank Post";
-            this.btnRank.UseVisualStyleBackColor = true;
+            this.btnRank.UseVisualStyleBackColor = false;
             this.btnRank.Click += new System.EventHandler(this.btnRank_Click);
             // 
             // lblSurname
@@ -364,6 +357,7 @@
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
             this.vIEWPOSTSDataGridView.DataSource = this.vIEWPOSTSBindingSource;
+            this.vIEWPOSTSDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.vIEWPOSTSDataGridView.Location = new System.Drawing.Point(12, 160);
             this.vIEWPOSTSDataGridView.Name = "vIEWPOSTSDataGridView";
             this.vIEWPOSTSDataGridView.RowTemplate.Height = 24;
@@ -470,7 +464,6 @@
         private System.Windows.Forms.ToolStripMenuItem viewProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewUsersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deregisterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private viewPosts viewPosts;
         private System.Windows.Forms.BindingSource vIEWPOSTSBindingSource;
         private viewPostsTableAdapters.VIEWPOSTSTableAdapter vIEWPOSTSTableAdapter;

@@ -82,12 +82,6 @@ namespace PostITTDB
             dereg.Show();
         }
 
-        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmChangePassword chgPass = new frmChangePassword();
-            this.Hide();
-            chgPass.Show();
-        }
 
         private void updateStatusToolStripMenuItem_Click(object sender, EventArgs e)
         {

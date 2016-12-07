@@ -122,5 +122,63 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="CATEGORYVIEWs">
+      <EntityTypeMapping TypeName="PostITTModel.CATEGORYVIEW">
+        <MappingFragment StoreEntitySet="CATEGORYVIEW">
+          <ScalarProperty Name="CATEGORYNAME" ColumnName="CATEGORYNAME" />
+          <ScalarProperty Name="CATEGORYID" ColumnName="CATEGORYID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="POSTTYPEDESCVIEWs">
+      <EntityTypeMapping TypeName="PostITTModel.POSTTYPEDESCVIEW">
+        <MappingFragment StoreEntitySet="POSTTYPEDESCVIEW">
+          <ScalarProperty Name="POSTTYPEDESC" ColumnName="POSTTYPEDESC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEWUSERs">
+      <EntityTypeMapping TypeName="PostITTModel.VIEWUSER">
+        <MappingFragment StoreEntitySet="VIEWUSER">
+          <ScalarProperty Name="SCORE" ColumnName="SCORE" />
+          <ScalarProperty Name="SURNAME" ColumnName="SURNAME" />
+          <ScalarProperty Name="FIRSTNAME" ColumnName="FIRSTNAME" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEWUSERPOSTS">
+      <EntityTypeMapping TypeName="PostITTModel.VIEWUSERPOST">
+        <MappingFragment StoreEntitySet="VIEWUSERPOSTS">
+          <ScalarProperty Name="POSTTEXT" ColumnName="POSTTEXT" />
+          <ScalarProperty Name="SURNAME" ColumnName="SURNAME" />
+          <ScalarProperty Name="FIRSTNAME" ColumnName="FIRSTNAME" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEWUSERPROFILEs">
+      <EntityTypeMapping TypeName="PostITTModel.VIEWUSERPROFILE">
+        <MappingFragment StoreEntitySet="VIEWUSERPROFILE">
+          <ScalarProperty Name="PROFILEPIC" ColumnName="PROFILEPIC" />
+          <ScalarProperty Name="SCORE" ColumnName="SCORE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="SURNAME" ColumnName="SURNAME" />
+          <ScalarProperty Name="FIRSTNAME" ColumnName="FIRSTNAME" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEWUSERTYPEPOSTS">
+      <EntityTypeMapping TypeName="PostITTModel.VIEWUSERTYPEPOST">
+        <MappingFragment StoreEntitySet="VIEWUSERTYPEPOSTS">
+          <ScalarProperty Name="POSTTEXT" ColumnName="POSTTEXT" />
+          <ScalarProperty Name="SURNAME" ColumnName="SURNAME" />
+          <ScalarProperty Name="FIRSTNAME" ColumnName="FIRSTNAME" />
+          <ScalarProperty Name="TYPEDESCRIPTION" ColumnName="TYPEDESCRIPTION" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

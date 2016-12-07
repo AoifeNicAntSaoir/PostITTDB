@@ -111,7 +111,7 @@ namespace PostITTDB
                 POST newPost = new POST();
 
                 newPost.POSTTEXT = text;
-                newPost.USERID = 1;
+                newPost.USERID = (short)Convert.ToInt16(CurrentLoginUser.userid);
                 newPost.POSTTYPEID = (short)postTypeID;
                 newPost.CATEGORYID = (short)catid;
 
@@ -177,12 +177,6 @@ namespace PostITTDB
             dereg.Show();
         }
 
-        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmChangePassword chgPass = new frmChangePassword();
-            this.Hide();
-            chgPass.Show();
-        }
 
         private void updateStatusToolStripMenuItem_Click(object sender, EventArgs e)
         {

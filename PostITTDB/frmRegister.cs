@@ -17,71 +17,6 @@ namespace PostITTDB
             InitializeComponent();
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
-            //Validation
-            if (txtFirstName.Text.Equals(""))
-            {
-                MessageBox.Show("Please enter in a Firstname", "Field Empty",
-                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtFirstName.Focus();
-                return;
-            }
-
-            if (txtSurname.Text.Equals(""))
-            {
-                MessageBox.Show("Please enter in a Firstname", "Field Empty",
-                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtSurname.Focus();
-                return;
-            }
-
-            if(txtPassword.Text.Equals(""))
-            {
-                MessageBox.Show("Please enter in a Password", "Field Empty",
-                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtPassword.Focus();
-                return;
-            }
-
-            if(txtEmail.Text.Equals(""))
-            {
-                MessageBox.Show("Please enter in a e-mail", "Field Empty",
-                 MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtEmail.Focus();
-                return;
-            }
-
-            using (var context = new PostITTEntities())
-            {
-
-                ITTUSER newStudent = new ITTUSER()
-                {
-                    FIRSTNAME = txtFirstName.Text,
-                    SURNAME = txtSurname.Text,
-                    PASSWORD = txtPassword.Text,
-                    EMAIL = txtEmail.Text
-                };
-                try
-                {
-                    var result = context.CREATEITTUSER(newStudent.FIRSTNAME, newStudent.SURNAME, newStudent.PASSWORD, newStudent.EMAIL);
-                    context.SaveChanges();
-                    MessageBox.Show(newStudent.FIRSTNAME + " " + newStudent.SURNAME + " account has been created", "Account Registered", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtEmail.Text = "";
-                    txtFirstName.Text = "";
-                    txtPassword.Text = "";
-                    txtSurname.Text = "";
-
-                }
-                catch(Exception ex)
-                {
-                    MessageBox.Show(ex.GetBaseException().ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                
-            }
-        }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -118,12 +53,6 @@ namespace PostITTDB
             dereg.Show();
         }
 
-        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmChangePassword chgPassword = new frmChangePassword();
-            this.Hide();
-            chgPassword.Show();
-        }
 
         private void frmRegister_Load(object sender, EventArgs e)
         {
@@ -145,6 +74,72 @@ namespace PostITTDB
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRegister_Click_1(object sender, EventArgs e)
+        {
+            //Validation
+            if (txtFirstName.Text.Equals(""))
+            {
+                MessageBox.Show("Please enter in a Firstname", "Field Empty",
+                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtFirstName.Focus();
+                return;
+            }
+
+            if (txtSurname.Text.Equals(""))
+            {
+                MessageBox.Show("Please enter in a Firstname", "Field Empty",
+                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtSurname.Focus();
+                return;
+            }
+
+            if (txtPassword.Text.Equals(""))
+            {
+                MessageBox.Show("Please enter in a Password", "Field Empty",
+                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtPassword.Focus();
+                return;
+            }
+
+            if (txtEmail.Text.Equals(""))
+            {
+                MessageBox.Show("Please enter in a e-mail", "Field Empty",
+                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtEmail.Focus();
+                return;
+            }
+
+            using (var context = new PostITTEntities())
+            {
+
+                ITTUSER newStudent = new ITTUSER()
+                {
+                    FIRSTNAME = txtFirstName.Text,
+                    SURNAME = txtSurname.Text,
+                    PASSWORD = txtPassword.Text,
+                    EMAIL = txtEmail.Text
+                };
+                try
+                {
+                    var result = context.CREATEITTUSER(newStudent.FIRSTNAME, newStudent.SURNAME, newStudent.PASSWORD, newStudent.EMAIL);
+                    context.SaveChanges();
+                    MessageBox.Show(newStudent.FIRSTNAME + " " + newStudent.SURNAME + " account has been created", "Account Registered", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtEmail.Text = "";
+                    txtFirstName.Text = "";
+                    txtPassword.Text = "";
+                    txtSurname.Text = "";
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.GetBaseException().ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+
+            }
         }
     }
 }

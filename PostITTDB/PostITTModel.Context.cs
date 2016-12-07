@@ -37,6 +37,12 @@ namespace PostITTDB
         public virtual DbSet<TAG> TAGs { get; set; }
         public virtual DbSet<USERTYPE> USERTYPEs { get; set; }
         public virtual DbSet<VIEWPOST> VIEWPOSTS { get; set; }
+        public virtual DbSet<CATEGORYVIEW> CATEGORYVIEWs { get; set; }
+        public virtual DbSet<POSTTYPEDESCVIEW> POSTTYPEDESCVIEWs { get; set; }
+        public virtual DbSet<VIEWUSER> VIEWUSERs { get; set; }
+        public virtual DbSet<VIEWUSERPOST> VIEWUSERPOSTS { get; set; }
+        public virtual DbSet<VIEWUSERPROFILE> VIEWUSERPROFILEs { get; set; }
+        public virtual DbSet<VIEWUSERTYPEPOST> VIEWUSERTYPEPOSTS { get; set; }
     
         public virtual int ANSWERPOST()
         {

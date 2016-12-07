@@ -41,7 +41,6 @@
             this.viewProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deregisterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -49,10 +48,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Blue;
             this.label2.Location = new System.Drawing.Point(232, 94);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 36);
+            this.label2.Size = new System.Drawing.Size(288, 48);
             this.label2.TabIndex = 45;
             this.label2.Text = "De-Register";
             // 
@@ -116,13 +116,15 @@
             // 
             // btnRegister
             // 
+            this.btnRegister.BackColor = System.Drawing.Color.Blue;
             this.btnRegister.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.ForeColor = System.Drawing.Color.White;
             this.btnRegister.Location = new System.Drawing.Point(258, 350);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(169, 55);
             this.btnRegister.TabIndex = 46;
             this.btnRegister.Text = "De-Register";
-            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // menuStrip1
@@ -133,7 +135,6 @@
             this.viewProfileToolStripMenuItem,
             this.viewUsersToolStripMenuItem,
             this.deregisterToolStripMenuItem,
-            this.changePasswordToolStripMenuItem,
             this.updateStatusToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -169,13 +170,6 @@
             this.deregisterToolStripMenuItem.Text = "Deregister";
             this.deregisterToolStripMenuItem.Click += new System.EventHandler(this.deregisterToolStripMenuItem_Click);
             // 
-            // changePasswordToolStripMenuItem
-            // 
-            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
-            this.changePasswordToolStripMenuItem.Text = "Change Password";
-            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
-            // 
             // updateStatusToolStripMenuItem
             // 
             this.updateStatusToolStripMenuItem.Name = "updateStatusToolStripMenuItem";
@@ -187,6 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(756, 514);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.label2);
@@ -222,7 +217,6 @@
         private System.Windows.Forms.ToolStripMenuItem viewProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewUsersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deregisterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateStatusToolStripMenuItem;
     }
 }

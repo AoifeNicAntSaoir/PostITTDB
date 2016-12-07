@@ -45,12 +45,6 @@ namespace PostITTDB
             dereg.Show();
         }
 
-        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmChangePassword chgPass = new frmChangePassword();
-            this.Hide();
-            chgPass.Show();
-        }
 
         private void frmUpdateStatusToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -64,8 +58,8 @@ namespace PostITTDB
             txtFirstname.Text = CurrentLoginUser.firstname;
             lblSurnameLog.Text = CurrentLoginUser.surname;
 
-
-            using(var context = new PostITTDS())
+            
+            using (var context = new PostITTDS())
             {
                 BindingSource bindingSource1 = new BindingSource();
                 bindingSource1.DataSource = (from r in context.VIEWUSERPOSTS
@@ -75,7 +69,10 @@ namespace PostITTDB
                 dataGridProfilePosts.DataSource = bindingSource1;
      
             }
-            
+
+            dataGridProfilePosts.Update();
+            dataGridProfilePosts.Refresh();
+
         }
     }
 }

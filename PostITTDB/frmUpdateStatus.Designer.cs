@@ -64,7 +64,6 @@
             this.viewProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deregisterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.postITTDS)).BeginInit();
@@ -341,7 +340,6 @@
             this.viewProfileToolStripMenuItem,
             this.viewUsersToolStripMenuItem,
             this.deregisterToolStripMenuItem,
-            this.changePasswordToolStripMenuItem,
             this.updateStatusToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 27);
             this.menuStrip1.Name = "menuStrip1";
@@ -376,13 +374,6 @@
             this.deregisterToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
             this.deregisterToolStripMenuItem.Text = "Deregister";
             this.deregisterToolStripMenuItem.Click += new System.EventHandler(this.deregisterToolStripMenuItem_Click);
-            // 
-            // changePasswordToolStripMenuItem
-            // 
-            this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(136, 24);
-            this.changePasswordToolStripMenuItem.Text = "Change Password";
-            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // updateStatusToolStripMenuItem
             // 
@@ -470,7 +461,6 @@
         private System.Windows.Forms.ToolStripMenuItem viewProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewUsersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deregisterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateStatusToolStripMenuItem;
         private System.Windows.Forms.Label label3;
     }

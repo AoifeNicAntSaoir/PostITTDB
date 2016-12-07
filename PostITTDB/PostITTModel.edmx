@@ -87,21 +87,38 @@
           <Property Name="TYPEDESCRIPTION" Type="varchar2" MaxLength="1" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
+warning 6002: The table/view 'AOIFESAYERS.CATEGORYVIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="CATEGORYVIEW">
+          <Key>
+            <PropertyRef Name="CATEGORYID" />
+            <PropertyRef Name="CATEGORYNAME" />
+          </Key>
+          <Property Name="CATEGORYID" Type="number" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="CATEGORYNAME" Type="varchar2" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'AOIFESAYERS.POSTTYPEDESCVIEW' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="POSTTYPEDESCVIEW">
+          <Key>
+            <PropertyRef Name="POSTTYPEDESC" />
+          </Key>
+          <Property Name="POSTTYPEDESC" Type="varchar2" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
 warning 6002: The table/view 'AOIFESAYERS.VIEWPOSTS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="VIEWPOSTS">
           <Key>
             <PropertyRef Name="POSTID" />
-            <PropertyRef Name="POSTRANK" />
             <PropertyRef Name="POSTTEXT" />
             <PropertyRef Name="FIRSTNAME" />
             <PropertyRef Name="SURNAME" />
             <PropertyRef Name="POSTTYPEDESC" />
             <PropertyRef Name="CATEGORYNAME" />
             <PropertyRef Name="URL" />
+            <PropertyRef Name="POSTRANK" />
           </Key>
           <Property Name="POSTID" Type="number" Precision="5" Scale="0" Nullable="false" />
           <Property Name="PARENTID" Type="number" Precision="5" Scale="0" />
-          <Property Name="POSTRANK" Type="number" Precision="5" Scale="0" Nullable="false" />
           <Property Name="POSTDATE" Type="date" />
           <Property Name="POSTTEXT" Type="varchar2" MaxLength="50" Nullable="false" />
           <Property Name="FIRSTNAME" Type="varchar2" MaxLength="20" Nullable="false" />
@@ -109,6 +126,64 @@ warning 6002: The table/view 'AOIFESAYERS.VIEWPOSTS' does not have a primary key
           <Property Name="POSTTYPEDESC" Type="varchar2" MaxLength="20" Nullable="false" />
           <Property Name="CATEGORYNAME" Type="varchar2" MaxLength="20" Nullable="false" />
           <Property Name="URL" Type="varchar2" MaxLength="40" Nullable="false" />
+          <Property Name="POSTRANK" Type="number" Precision="5" Scale="0" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'AOIFESAYERS.VIEWUSER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="VIEWUSER">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="FIRSTNAME" />
+            <PropertyRef Name="SURNAME" />
+          </Key>
+          <Property Name="USERID" Type="number" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="FIRSTNAME" Type="varchar2" MaxLength="20" Nullable="false" />
+          <Property Name="SURNAME" Type="varchar2" MaxLength="20" Nullable="false" />
+          <Property Name="SCORE" Type="number" Precision="5" Scale="0" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'AOIFESAYERS.VIEWUSERPOSTS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="VIEWUSERPOSTS">
+          <Key>
+            <PropertyRef Name="FIRSTNAME" />
+            <PropertyRef Name="SURNAME" />
+            <PropertyRef Name="POSTTEXT" />
+          </Key>
+          <Property Name="USERID" Type="number" Precision="5" Scale="0" />
+          <Property Name="FIRSTNAME" Type="varchar2" MaxLength="20" Nullable="false" />
+          <Property Name="SURNAME" Type="varchar2" MaxLength="20" Nullable="false" />
+          <Property Name="POSTTEXT" Type="varchar2" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'AOIFESAYERS.VIEWUSERPROFILE' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="VIEWUSERPROFILE">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="FIRSTNAME" />
+            <PropertyRef Name="SURNAME" />
+            <PropertyRef Name="EMAIL" />
+          </Key>
+          <Property Name="USERID" Type="number" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="FIRSTNAME" Type="varchar2" MaxLength="20" Nullable="false" />
+          <Property Name="SURNAME" Type="varchar2" MaxLength="20" Nullable="false" />
+          <Property Name="EMAIL" Type="varchar2" MaxLength="30" Nullable="false" />
+          <Property Name="SCORE" Type="number" Precision="5" Scale="0" />
+          <Property Name="PROFILEPIC" Type="varchar2" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'AOIFESAYERS.VIEWUSERTYPEPOSTS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="VIEWUSERTYPEPOSTS">
+          <Key>
+            <PropertyRef Name="TYPEDESCRIPTION" />
+            <PropertyRef Name="FIRSTNAME" />
+            <PropertyRef Name="SURNAME" />
+            <PropertyRef Name="POSTTEXT" />
+          </Key>
+          <Property Name="USERID" Type="number" Precision="5" Scale="0" />
+          <Property Name="TYPEDESCRIPTION" Type="varchar2" MaxLength="1" Nullable="false" />
+          <Property Name="FIRSTNAME" Type="varchar2" MaxLength="20" Nullable="false" />
+          <Property Name="SURNAME" Type="varchar2" MaxLength="20" Nullable="false" />
+          <Property Name="POSTTEXT" Type="varchar2" MaxLength="50" Nullable="false" />
         </EntityType>
         <Association Name="FK_CATEGORYID_P">
           <End Role="CATEGORY" Type="Self.CATEGORY" Multiplicity="0..1" />
@@ -289,19 +364,65 @@ warning 6002: The table/view 'AOIFESAYERS.VIEWPOSTS' does not have a primary key
           <EntitySet Name="RANK" EntityType="Self.RANK" Schema="AOIFESAYERS" store:Type="Tables" />
           <EntitySet Name="TAG" EntityType="Self.TAG" Schema="AOIFESAYERS" store:Type="Tables" />
           <EntitySet Name="USERTYPE" EntityType="Self.USERTYPE" Schema="AOIFESAYERS" store:Type="Tables" />
+          <EntitySet Name="CATEGORYVIEW" EntityType="Self.CATEGORYVIEW" store:Type="Views" store:Schema="AOIFESAYERS">
+            <DefiningQuery>SELECT 
+"CATEGORYVIEW"."CATEGORYID" AS "CATEGORYID", 
+"CATEGORYVIEW"."CATEGORYNAME" AS "CATEGORYNAME"
+FROM "AOIFESAYERS"."CATEGORYVIEW" "CATEGORYVIEW"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="POSTTYPEDESCVIEW" EntityType="Self.POSTTYPEDESCVIEW" store:Type="Views" store:Schema="AOIFESAYERS">
+            <DefiningQuery>SELECT 
+"POSTTYPEDESCVIEW"."POSTTYPEDESC" AS "POSTTYPEDESC"
+FROM "AOIFESAYERS"."POSTTYPEDESCVIEW" "POSTTYPEDESCVIEW"</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="VIEWPOSTS" EntityType="Self.VIEWPOSTS" store:Type="Views" store:Schema="AOIFESAYERS">
             <DefiningQuery>SELECT 
 "VIEWPOSTS"."POSTID" AS "POSTID", 
 "VIEWPOSTS"."PARENTID" AS "PARENTID", 
-"VIEWPOSTS"."POSTRANK" AS "POSTRANK", 
 "VIEWPOSTS"."POSTDATE" AS "POSTDATE", 
 "VIEWPOSTS"."POSTTEXT" AS "POSTTEXT", 
 "VIEWPOSTS"."FIRSTNAME" AS "FIRSTNAME", 
 "VIEWPOSTS"."SURNAME" AS "SURNAME", 
 "VIEWPOSTS"."POSTTYPEDESC" AS "POSTTYPEDESC", 
 "VIEWPOSTS"."CATEGORYNAME" AS "CATEGORYNAME", 
-"VIEWPOSTS"."URL" AS "URL"
+"VIEWPOSTS"."URL" AS "URL", 
+"VIEWPOSTS"."POSTRANK" AS "POSTRANK"
 FROM "AOIFESAYERS"."VIEWPOSTS" "VIEWPOSTS"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VIEWUSER" EntityType="Self.VIEWUSER" store:Type="Views" store:Schema="AOIFESAYERS">
+            <DefiningQuery>SELECT 
+"VIEWUSER"."USERID" AS "USERID", 
+"VIEWUSER"."FIRSTNAME" AS "FIRSTNAME", 
+"VIEWUSER"."SURNAME" AS "SURNAME", 
+"VIEWUSER"."SCORE" AS "SCORE"
+FROM "AOIFESAYERS"."VIEWUSER" "VIEWUSER"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VIEWUSERPOSTS" EntityType="Self.VIEWUSERPOSTS" store:Type="Views" store:Schema="AOIFESAYERS">
+            <DefiningQuery>SELECT 
+"VIEWUSERPOSTS"."USERID" AS "USERID", 
+"VIEWUSERPOSTS"."FIRSTNAME" AS "FIRSTNAME", 
+"VIEWUSERPOSTS"."SURNAME" AS "SURNAME", 
+"VIEWUSERPOSTS"."POSTTEXT" AS "POSTTEXT"
+FROM "AOIFESAYERS"."VIEWUSERPOSTS" "VIEWUSERPOSTS"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VIEWUSERPROFILE" EntityType="Self.VIEWUSERPROFILE" store:Type="Views" store:Schema="AOIFESAYERS">
+            <DefiningQuery>SELECT 
+"VIEWUSERPROFILE"."USERID" AS "USERID", 
+"VIEWUSERPROFILE"."FIRSTNAME" AS "FIRSTNAME", 
+"VIEWUSERPROFILE"."SURNAME" AS "SURNAME", 
+"VIEWUSERPROFILE"."EMAIL" AS "EMAIL", 
+"VIEWUSERPROFILE"."SCORE" AS "SCORE", 
+"VIEWUSERPROFILE"."PROFILEPIC" AS "PROFILEPIC"
+FROM "AOIFESAYERS"."VIEWUSERPROFILE" "VIEWUSERPROFILE"</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="VIEWUSERTYPEPOSTS" EntityType="Self.VIEWUSERTYPEPOSTS" store:Type="Views" store:Schema="AOIFESAYERS">
+            <DefiningQuery>SELECT 
+"VIEWUSERTYPEPOSTS"."USERID" AS "USERID", 
+"VIEWUSERTYPEPOSTS"."TYPEDESCRIPTION" AS "TYPEDESCRIPTION", 
+"VIEWUSERTYPEPOSTS"."FIRSTNAME" AS "FIRSTNAME", 
+"VIEWUSERTYPEPOSTS"."SURNAME" AS "SURNAME", 
+"VIEWUSERTYPEPOSTS"."POSTTEXT" AS "POSTTEXT"
+FROM "AOIFESAYERS"."VIEWUSERTYPEPOSTS" "VIEWUSERTYPEPOSTS"</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK_CATEGORYID_P" Association="Self.FK_CATEGORYID_P">
             <End Role="CATEGORY" EntitySet="CATEGORY" />
@@ -454,6 +575,12 @@ FROM "AOIFESAYERS"."VIEWPOSTS" "VIEWPOSTS"</DefiningQuery>
           <Parameter Name="P_ID" Mode="In" Type="Decimal" />
           </FunctionImport>
           <EntitySet Name="VIEWPOSTS" EntityType="PostITTModel.VIEWPOST" />
+          <EntitySet Name="CATEGORYVIEWs" EntityType="PostITTModel.CATEGORYVIEW" />
+          <EntitySet Name="POSTTYPEDESCVIEWs" EntityType="PostITTModel.POSTTYPEDESCVIEW" />
+          <EntitySet Name="VIEWUSERs" EntityType="PostITTModel.VIEWUSER" />
+          <EntitySet Name="VIEWUSERPOSTS" EntityType="PostITTModel.VIEWUSERPOST" />
+          <EntitySet Name="VIEWUSERPROFILEs" EntityType="PostITTModel.VIEWUSERPROFILE" />
+          <EntitySet Name="VIEWUSERTYPEPOSTS" EntityType="PostITTModel.VIEWUSERTYPEPOST" />
         </EntityContainer>
         <EntityType Name="CATEGORY">
           <Key>
@@ -698,6 +825,69 @@ FROM "AOIFESAYERS"."VIEWPOSTS" "VIEWPOSTS"</DefiningQuery>
           <Property Name="CATEGORYNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="URL" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="CATEGORYVIEW">
+          <Key>
+            <PropertyRef Name="CATEGORYID" />
+            <PropertyRef Name="CATEGORYNAME" />
+          </Key>
+          <Property Name="CATEGORYID" Type="Int16" Nullable="false" />
+          <Property Name="CATEGORYNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="POSTTYPEDESCVIEW">
+          <Key>
+            <PropertyRef Name="POSTTYPEDESC" />
+          </Key>
+          <Property Name="POSTTYPEDESC" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="VIEWUSER">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="FIRSTNAME" />
+            <PropertyRef Name="SURNAME" />
+          </Key>
+          <Property Name="USERID" Type="Int16" Nullable="false" />
+          <Property Name="FIRSTNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SURNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SCORE" Type="Int16" />
+        </EntityType>
+        <EntityType Name="VIEWUSERPOST">
+          <Key>
+            <PropertyRef Name="FIRSTNAME" />
+            <PropertyRef Name="SURNAME" />
+            <PropertyRef Name="POSTTEXT" />
+          </Key>
+          <Property Name="USERID" Type="Int16" />
+          <Property Name="FIRSTNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SURNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="POSTTEXT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="VIEWUSERPROFILE">
+          <Key>
+            <PropertyRef Name="USERID" />
+            <PropertyRef Name="FIRSTNAME" />
+            <PropertyRef Name="SURNAME" />
+            <PropertyRef Name="EMAIL" />
+          </Key>
+          <Property Name="USERID" Type="Int16" Nullable="false" />
+          <Property Name="FIRSTNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SURNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="SCORE" Type="Int16" />
+          <Property Name="PROFILEPIC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="VIEWUSERTYPEPOST">
+          <Key>
+            <PropertyRef Name="TYPEDESCRIPTION" />
+            <PropertyRef Name="FIRSTNAME" />
+            <PropertyRef Name="SURNAME" />
+            <PropertyRef Name="POSTTEXT" />
+          </Key>
+          <Property Name="USERID" Type="Int16" />
+          <Property Name="TYPEDESCRIPTION" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="FIRSTNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SURNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="POSTTEXT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -822,6 +1012,64 @@ FROM "AOIFESAYERS"."VIEWPOSTS" "VIEWPOSTS"</DefiningQuery>
                 <ScalarProperty Name="POSTRANK" ColumnName="POSTRANK" />
                 <ScalarProperty Name="PARENTID" ColumnName="PARENTID" />
                 <ScalarProperty Name="POSTID" ColumnName="POSTID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CATEGORYVIEWs">
+            <EntityTypeMapping TypeName="PostITTModel.CATEGORYVIEW">
+              <MappingFragment StoreEntitySet="CATEGORYVIEW">
+                <ScalarProperty Name="CATEGORYNAME" ColumnName="CATEGORYNAME" />
+                <ScalarProperty Name="CATEGORYID" ColumnName="CATEGORYID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="POSTTYPEDESCVIEWs">
+            <EntityTypeMapping TypeName="PostITTModel.POSTTYPEDESCVIEW">
+              <MappingFragment StoreEntitySet="POSTTYPEDESCVIEW">
+                <ScalarProperty Name="POSTTYPEDESC" ColumnName="POSTTYPEDESC" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VIEWUSERs">
+            <EntityTypeMapping TypeName="PostITTModel.VIEWUSER">
+              <MappingFragment StoreEntitySet="VIEWUSER">
+                <ScalarProperty Name="SCORE" ColumnName="SCORE" />
+                <ScalarProperty Name="SURNAME" ColumnName="SURNAME" />
+                <ScalarProperty Name="FIRSTNAME" ColumnName="FIRSTNAME" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VIEWUSERPOSTS">
+            <EntityTypeMapping TypeName="PostITTModel.VIEWUSERPOST">
+              <MappingFragment StoreEntitySet="VIEWUSERPOSTS">
+                <ScalarProperty Name="POSTTEXT" ColumnName="POSTTEXT" />
+                <ScalarProperty Name="SURNAME" ColumnName="SURNAME" />
+                <ScalarProperty Name="FIRSTNAME" ColumnName="FIRSTNAME" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VIEWUSERPROFILEs">
+            <EntityTypeMapping TypeName="PostITTModel.VIEWUSERPROFILE">
+              <MappingFragment StoreEntitySet="VIEWUSERPROFILE">
+                <ScalarProperty Name="PROFILEPIC" ColumnName="PROFILEPIC" />
+                <ScalarProperty Name="SCORE" ColumnName="SCORE" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="SURNAME" ColumnName="SURNAME" />
+                <ScalarProperty Name="FIRSTNAME" ColumnName="FIRSTNAME" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="VIEWUSERTYPEPOSTS">
+            <EntityTypeMapping TypeName="PostITTModel.VIEWUSERTYPEPOST">
+              <MappingFragment StoreEntitySet="VIEWUSERTYPEPOSTS">
+                <ScalarProperty Name="POSTTEXT" ColumnName="POSTTEXT" />
+                <ScalarProperty Name="SURNAME" ColumnName="SURNAME" />
+                <ScalarProperty Name="FIRSTNAME" ColumnName="FIRSTNAME" />
+                <ScalarProperty Name="TYPEDESCRIPTION" ColumnName="TYPEDESCRIPTION" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

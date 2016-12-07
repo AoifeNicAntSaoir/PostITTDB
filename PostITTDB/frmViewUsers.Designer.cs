@@ -304,6 +304,7 @@
             // vIEWUSERDataGridView
             // 
             this.vIEWUSERDataGridView.AutoGenerateColumns = false;
+            this.vIEWUSERDataGridView.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.vIEWUSERDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.vIEWUSERDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -311,10 +312,11 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
             this.vIEWUSERDataGridView.DataSource = this.vIEWUSERBindingSource;
-            this.vIEWUSERDataGridView.Location = new System.Drawing.Point(180, 269);
+            this.vIEWUSERDataGridView.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.vIEWUSERDataGridView.Location = new System.Drawing.Point(154, 208);
             this.vIEWUSERDataGridView.Name = "vIEWUSERDataGridView";
             this.vIEWUSERDataGridView.RowTemplate.Height = 24;
-            this.vIEWUSERDataGridView.Size = new System.Drawing.Size(675, 220);
+            this.vIEWUSERDataGridView.Size = new System.Drawing.Size(703, 273);
             this.vIEWUSERDataGridView.TabIndex = 56;
             // 
             // dataGridViewTextBoxColumn1
@@ -362,20 +364,22 @@
             // lblSurname
             // 
             this.lblSurname.AutoSize = true;
-            this.lblSurname.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurname.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSurname.ForeColor = System.Drawing.Color.Blue;
             this.lblSurname.Location = new System.Drawing.Point(222, 129);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(113, 25);
+            this.lblSurname.Size = new System.Drawing.Size(119, 25);
             this.lblSurname.TabIndex = 60;
             this.lblSurname.Text = "Surname:";
             // 
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFirstName.ForeColor = System.Drawing.Color.Blue;
             this.lblFirstName.Location = new System.Drawing.Point(204, 93);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(131, 25);
+            this.lblFirstName.Size = new System.Drawing.Size(142, 25);
             this.lblFirstName.TabIndex = 59;
             this.lblFirstName.Text = "First Name:";
             // 
@@ -383,6 +387,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(1173, 565);
             this.Controls.Add(this.lblSurnameLog);
             this.Controls.Add(this.txtFirstname);

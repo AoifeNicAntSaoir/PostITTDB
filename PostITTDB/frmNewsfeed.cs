@@ -49,9 +49,7 @@ namespace PostITTDB
 
         private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmChangePassword chgPassword = new frmChangePassword();
-            this.Hide();
-            chgPassword.Show();
+    
         }
 
         private void frmNewsfeed_Load(object sender, EventArgs e)
@@ -61,8 +59,11 @@ namespace PostITTDB
 
             // TODO: This line of code loads data into the 'viewPosts.VIEWPOSTS' table. You can move, or remove it, as needed.
             this.vIEWPOSTSTableAdapter.Fill(this.viewPosts.VIEWPOSTS);
+            vIEWPOSTSDataGridView.Update();
+            vIEWPOSTSDataGridView.Refresh();
 
-       
+
+
 
         }
 
@@ -93,7 +94,11 @@ namespace PostITTDB
                 {
                     MessageBox.Show(ex.GetBaseException().ToString(),"Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
-                
+
+                vIEWPOSTSDataGridView.Update();
+                vIEWPOSTSDataGridView.Refresh();
+
+
 
             }
 

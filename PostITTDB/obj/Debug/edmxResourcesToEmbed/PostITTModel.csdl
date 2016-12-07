@@ -106,6 +106,12 @@
       <Parameter Name="P_ID" Mode="In" Type="Decimal" />
     </FunctionImport>
     <EntitySet Name="VIEWPOSTS" EntityType="PostITTModel.VIEWPOST" />
+    <EntitySet Name="CATEGORYVIEWs" EntityType="PostITTModel.CATEGORYVIEW" />
+    <EntitySet Name="POSTTYPEDESCVIEWs" EntityType="PostITTModel.POSTTYPEDESCVIEW" />
+    <EntitySet Name="VIEWUSERs" EntityType="PostITTModel.VIEWUSER" />
+    <EntitySet Name="VIEWUSERPOSTS" EntityType="PostITTModel.VIEWUSERPOST" />
+    <EntitySet Name="VIEWUSERPROFILEs" EntityType="PostITTModel.VIEWUSERPROFILE" />
+    <EntitySet Name="VIEWUSERTYPEPOSTS" EntityType="PostITTModel.VIEWUSERTYPEPOST" />
   </EntityContainer>
   <EntityType Name="CATEGORY">
     <Key>
@@ -349,5 +355,68 @@
     <Property Name="POSTTYPEDESC" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="CATEGORYNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="URL" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CATEGORYVIEW">
+    <Key>
+      <PropertyRef Name="CATEGORYID" />
+      <PropertyRef Name="CATEGORYNAME" />
+    </Key>
+    <Property Name="CATEGORYID" Type="Int16" Nullable="false" />
+    <Property Name="CATEGORYNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="POSTTYPEDESCVIEW">
+    <Key>
+      <PropertyRef Name="POSTTYPEDESC" />
+    </Key>
+    <Property Name="POSTTYPEDESC" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="VIEWUSER">
+    <Key>
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="FIRSTNAME" />
+      <PropertyRef Name="SURNAME" />
+    </Key>
+    <Property Name="USERID" Type="Int16" Nullable="false" />
+    <Property Name="FIRSTNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SURNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SCORE" Type="Int16" />
+  </EntityType>
+  <EntityType Name="VIEWUSERPOST">
+    <Key>
+      <PropertyRef Name="FIRSTNAME" />
+      <PropertyRef Name="SURNAME" />
+      <PropertyRef Name="POSTTEXT" />
+    </Key>
+    <Property Name="USERID" Type="Int16" />
+    <Property Name="FIRSTNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SURNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="POSTTEXT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="VIEWUSERPROFILE">
+    <Key>
+      <PropertyRef Name="USERID" />
+      <PropertyRef Name="FIRSTNAME" />
+      <PropertyRef Name="SURNAME" />
+      <PropertyRef Name="EMAIL" />
+    </Key>
+    <Property Name="USERID" Type="Int16" Nullable="false" />
+    <Property Name="FIRSTNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SURNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="EMAIL" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="SCORE" Type="Int16" />
+    <Property Name="PROFILEPIC" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="VIEWUSERTYPEPOST">
+    <Key>
+      <PropertyRef Name="TYPEDESCRIPTION" />
+      <PropertyRef Name="FIRSTNAME" />
+      <PropertyRef Name="SURNAME" />
+      <PropertyRef Name="POSTTEXT" />
+    </Key>
+    <Property Name="USERID" Type="Int16" />
+    <Property Name="TYPEDESCRIPTION" Type="String" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="FIRSTNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="SURNAME" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="POSTTEXT" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
   </EntityType>
 </Schema>
