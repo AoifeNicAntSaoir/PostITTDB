@@ -141,5 +141,10 @@ namespace PostITTDB
             this.Hide();
             updateStatus.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -38,25 +38,25 @@
             this.cATEGORYVIEWBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cATEGORYVIEWTableAdapter = new PostITTDB.PostITTDSTableAdapters.CATEGORYVIEWTableAdapter();
             this.tableAdapterManager = new PostITTDB.PostITTDSTableAdapters.TableAdapterManager();
+            this.tAGTableAdapter = new PostITTDB.PostITTDSTableAdapters.TAGTableAdapter();
             this.cATEGORYVIEWBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.cATEGORYVIEWBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.cATEGORYVIEWComboBox = new System.Windows.Forms.ComboBox();
             this.pOSTTYPEDESCVIEWBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pOSTTYPEDESCVIEWTableAdapter = new PostITTDB.PostITTDSTableAdapters.POSTTYPEDESCVIEWTableAdapter();
             this.pOSTTYPEDESCVIEWComboBox = new System.Windows.Forms.ComboBox();
             this.tAGBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tAGTableAdapter = new PostITTDB.PostITTDSTableAdapters.TAGTableAdapter();
             this.btnPost = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -66,6 +66,7 @@
             this.deregisterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.updateStatusToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.postITTDS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cATEGORYVIEWBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cATEGORYVIEWBindingNavigator)).BeginInit();
@@ -79,7 +80,7 @@
             // 
             this.lblFirstName.AutoSize = true;
             this.lblFirstName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstName.Location = new System.Drawing.Point(115, 114);
+            this.lblFirstName.Location = new System.Drawing.Point(118, 194);
             this.lblFirstName.Name = "lblFirstName";
             this.lblFirstName.Size = new System.Drawing.Size(112, 25);
             this.lblFirstName.TabIndex = 34;
@@ -89,7 +90,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(115, 232);
+            this.label1.Location = new System.Drawing.Point(118, 290);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 25);
             this.label1.TabIndex = 36;
@@ -99,7 +100,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(70, 286);
+            this.label2.Location = new System.Drawing.Point(73, 344);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(161, 25);
             this.label2.TabIndex = 37;
@@ -108,7 +109,7 @@
             // txtPost
             // 
             this.txtPost.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPost.Location = new System.Drawing.Point(284, 107);
+            this.txtPost.Location = new System.Drawing.Point(287, 187);
             this.txtPost.MaxLength = 50;
             this.txtPost.Multiline = true;
             this.txtPost.Name = "txtPost";
@@ -145,6 +146,10 @@
             this.tableAdapterManager.UpdateOrder = PostITTDB.PostITTDSTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.USERTYPETableAdapter = null;
             // 
+            // tAGTableAdapter
+            // 
+            this.tAGTableAdapter.ClearBeforeFill = true;
+            // 
             // cATEGORYVIEWBindingNavigator
             // 
             this.cATEGORYVIEWBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -175,6 +180,31 @@
             this.cATEGORYVIEWBindingNavigator.Size = new System.Drawing.Size(753, 27);
             this.cATEGORYVIEWBindingNavigator.TabIndex = 38;
             this.cATEGORYVIEWBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -208,16 +238,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(45, 24);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
@@ -240,26 +263,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
             // cATEGORYVIEWBindingNavigatorSaveItem
             // 
@@ -277,7 +282,7 @@
             this.cATEGORYVIEWComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cATEGORYVIEWComboBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cATEGORYVIEWComboBox.FormattingEnabled = true;
-            this.cATEGORYVIEWComboBox.Location = new System.Drawing.Point(284, 291);
+            this.cATEGORYVIEWComboBox.Location = new System.Drawing.Point(287, 349);
             this.cATEGORYVIEWComboBox.Name = "cATEGORYVIEWComboBox";
             this.cATEGORYVIEWComboBox.Size = new System.Drawing.Size(300, 33);
             this.cATEGORYVIEWComboBox.TabIndex = 38;
@@ -299,7 +304,7 @@
             this.pOSTTYPEDESCVIEWComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.pOSTTYPEDESCVIEWComboBox.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pOSTTYPEDESCVIEWComboBox.FormattingEnabled = true;
-            this.pOSTTYPEDESCVIEWComboBox.Location = new System.Drawing.Point(284, 237);
+            this.pOSTTYPEDESCVIEWComboBox.Location = new System.Drawing.Point(287, 295);
             this.pOSTTYPEDESCVIEWComboBox.Name = "pOSTTYPEDESCVIEWComboBox";
             this.pOSTTYPEDESCVIEWComboBox.Size = new System.Drawing.Size(300, 33);
             this.pOSTTYPEDESCVIEWComboBox.TabIndex = 38;
@@ -310,19 +315,17 @@
             this.tAGBindingSource.DataMember = "TAG";
             this.tAGBindingSource.DataSource = this.postITTDS;
             // 
-            // tAGTableAdapter
-            // 
-            this.tAGTableAdapter.ClearBeforeFill = true;
-            // 
             // btnPost
             // 
+            this.btnPost.BackColor = System.Drawing.Color.Blue;
             this.btnPost.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPost.Location = new System.Drawing.Point(368, 383);
+            this.btnPost.ForeColor = System.Drawing.Color.White;
+            this.btnPost.Location = new System.Drawing.Point(364, 410);
             this.btnPost.Name = "btnPost";
             this.btnPost.Size = new System.Drawing.Size(131, 45);
             this.btnPost.TabIndex = 39;
             this.btnPost.Text = "Post";
-            this.btnPost.UseVisualStyleBackColor = true;
+            this.btnPost.UseVisualStyleBackColor = false;
             this.btnPost.Click += new System.EventHandler(this.btnPost_Click_1);
             // 
             // openFileDialog1
@@ -331,6 +334,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.MenuBar;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newsfeedToolStripMenuItem,
@@ -387,11 +391,24 @@
             this.updateStatusToolStripMenuItem.Text = "Update Status";
             this.updateStatusToolStripMenuItem.Click += new System.EventHandler(this.updateStatusToolStripMenuItem_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Blue;
+            this.label3.Location = new System.Drawing.Point(214, 92);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(338, 48);
+            this.label3.TabIndex = 49;
+            this.label3.Text = "Update Status";
+            // 
             // frmUpdateStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.ClientSize = new System.Drawing.Size(753, 536);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btnPost);
             this.Controls.Add(this.pOSTTYPEDESCVIEWComboBox);
@@ -402,7 +419,7 @@
             this.Controls.Add(this.txtPost);
             this.Controls.Add(this.lblFirstName);
             this.Name = "frmUpdateStatus";
-            this.Text = "frmUpdateStatus";
+            this.Text = "PostITT - Update Status";
             this.Load += new System.EventHandler(this.frmUpdateStatus_Load);
             ((System.ComponentModel.ISupportInitialize)(this.postITTDS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cATEGORYVIEWBindingSource)).EndInit();
@@ -455,5 +472,6 @@
         private System.Windows.Forms.ToolStripMenuItem deregisterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changePasswordToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem updateStatusToolStripMenuItem;
+        private System.Windows.Forms.Label label3;
     }
 }
