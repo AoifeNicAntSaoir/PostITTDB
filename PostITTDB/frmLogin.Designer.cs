@@ -90,6 +90,7 @@
             this.btnRegister.TabIndex = 49;
             this.btnRegister.Text = "Login";
             this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click_1);
             // 
             // txtPassword
             // 
