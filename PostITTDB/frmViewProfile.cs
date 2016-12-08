@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.OracleClient;
 
 namespace PostITTDB
 {
@@ -58,20 +59,22 @@ namespace PostITTDB
             txtFirstname.Text = CurrentLoginUser.firstname;
             lblSurnameLog.Text = CurrentLoginUser.surname;
 
-            
+            POST newpost = new POST();
+            newpost.USERID = (short)Convert.ToInt16(CurrentLoginUser.userid);
             using (var context = new PostITTDS())
             {
                 BindingSource bindingSource1 = new BindingSource();
-                bindingSource1.DataSource = (from r in context.VIEWUSERPOSTS
-                                             where (r.USERID == Convert.ToInt16(CurrentLoginUser.userid))
-                                             select new { r.USERID,r.POSTTEXT }).ToList();
+                bindingSource1.DataSource = (from r in context.POST
+                                             where (r.USERID == newpost.USERID)
+                                             select new { r.POSTDATE, r.POSTTEXT }).ToList();
 
                 dataGridProfilePosts.DataSource = bindingSource1;
-     
             }
+
 
             dataGridProfilePosts.Update();
             dataGridProfilePosts.Refresh();
+
 
         }
     }
