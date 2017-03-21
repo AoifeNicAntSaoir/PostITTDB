@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="viewPosts" targetNamespace="http://tempuri.org/viewPosts.xsd" xmlns:mstns="http://tempuri.org/viewPosts.xsd" xmlns="http://tempuri.org/viewPosts.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PostITTDB" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PostITTDB (Settings)" ParameterPrefix=":" PropertyReference="ApplicationSettings.PostITTDB.Properties.Settings.GlobalReference.Default.PostITTDB" Provider="Oracle.ManagedDataAccess.Client" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VIEWPOSTSTableAdapter" GeneratorDataComponentClassName="VIEWPOSTSTableAdapter" Name="VIEWPOSTS" UserDataComponentName="VIEWPOSTSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PostITTDB (Settings)" DbObjectName="AOIFESAYERS.VIEWPOSTS" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT POSTID, PARENTID, postrank, POSTDATE, POSTTEXT, FIRSTNAME, SURNAME, POSTTYPEDESC, CATEGORYNAME, URL FROM AOIFESAYERS.VIEWPOSTS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="POSTID" DataSetColumn="POSTID" />
+              <Mapping SourceColumn="PARENTID" DataSetColumn="PARENTID" />
+              <Mapping SourceColumn="POSTDATE" DataSetColumn="POSTDATE" />
+              <Mapping SourceColumn="POSTTEXT" DataSetColumn="POSTTEXT" />
+              <Mapping SourceColumn="FIRSTNAME" DataSetColumn="FIRSTNAME" />
+              <Mapping SourceColumn="SURNAME" DataSetColumn="SURNAME" />
+              <Mapping SourceColumn="POSTTYPEDESC" DataSetColumn="POSTTYPEDESC" />
+              <Mapping SourceColumn="CATEGORYNAME" DataSetColumn="CATEGORYNAME" />
+              <Mapping SourceColumn="URL" DataSetColumn="URL" />
+              <Mapping SourceColumn="POSTRANK" DataSetColumn="POSTRANK" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="viewPosts" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="viewPosts" msprop:Generator_UserDSName="viewPosts">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VIEWPOSTS" msprop:Generator_TableClassName="VIEWPOSTSDataTable" msprop:Generator_TableVarName="tableVIEWPOSTS" msprop:Generator_RowChangedName="VIEWPOSTSRowChanged" msprop:Generator_TablePropName="VIEWPOSTS" msprop:Generator_RowDeletingName="VIEWPOSTSRowDeleting" msprop:Generator_RowChangingName="VIEWPOSTSRowChanging" msprop:Generator_RowEvHandlerName="VIEWPOSTSRowChangeEventHandler" msprop:Generator_RowDeletedName="VIEWPOSTSRowDeleted" msprop:Generator_RowClassName="VIEWPOSTSRow" msprop:Generator_UserTableName="VIEWPOSTS" msprop:Generator_RowEvArgName="VIEWPOSTSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="POSTID" msprop:Generator_ColumnVarNameInTable="columnPOSTID" msprop:Generator_ColumnPropNameInRow="POSTID" msprop:Generator_ColumnPropNameInTable="POSTIDColumn" msprop:Generator_UserColumnName="POSTID" type="xs:int" />
+              <xs:element name="PARENTID" msprop:Generator_ColumnVarNameInTable="columnPARENTID" msprop:Generator_ColumnPropNameInRow="PARENTID" msprop:Generator_ColumnPropNameInTable="PARENTIDColumn" msprop:Generator_UserColumnName="PARENTID" type="xs:int" minOccurs="0" />
+              <xs:element name="POSTDATE" msprop:Generator_ColumnVarNameInTable="columnPOSTDATE" msprop:Generator_ColumnPropNameInRow="POSTDATE" msprop:Generator_ColumnPropNameInTable="POSTDATEColumn" msprop:Generator_UserColumnName="POSTDATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="POSTTEXT" msprop:Generator_ColumnVarNameInTable="columnPOSTTEXT" msprop:Generator_ColumnPropNameInRow="POSTTEXT" msprop:Generator_ColumnPropNameInTable="POSTTEXTColumn" msprop:Generator_UserColumnName="POSTTEXT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FIRSTNAME" msprop:Generator_ColumnVarNameInTable="columnFIRSTNAME" msprop:Generator_ColumnPropNameInRow="FIRSTNAME" msprop:Generator_ColumnPropNameInTable="FIRSTNAMEColumn" msprop:Generator_UserColumnName="FIRSTNAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SURNAME" msprop:Generator_ColumnVarNameInTable="columnSURNAME" msprop:Generator_ColumnPropNameInRow="SURNAME" msprop:Generator_ColumnPropNameInTable="SURNAMEColumn" msprop:Generator_UserColumnName="SURNAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="POSTTYPEDESC" msprop:Generator_ColumnVarNameInTable="columnPOSTTYPEDESC" msprop:Generator_ColumnPropNameInRow="POSTTYPEDESC" msprop:Generator_ColumnPropNameInTable="POSTTYPEDESCColumn" msprop:Generator_UserColumnName="POSTTYPEDESC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CATEGORYNAME" msprop:Generator_ColumnVarNameInTable="columnCATEGORYNAME" msprop:Generator_ColumnPropNameInRow="CATEGORYNAME" msprop:Generator_ColumnPropNameInTable="CATEGORYNAMEColumn" msprop:Generator_UserColumnName="CATEGORYNAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="URL" msprop:Generator_ColumnVarNameInTable="columnURL" msprop:Generator_ColumnPropNameInRow="URL" msprop:Generator_ColumnPropNameInTable="URLColumn" msprop:Generator_UserColumnName="URL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="POSTRANK" msprop:Generator_ColumnVarNameInTable="columnPOSTRANK" msprop:Generator_ColumnPropNameInRow="POSTRANK" msprop:Generator_ColumnPropNameInTable="POSTRANKColumn" msprop:Generator_UserColumnName="POSTRANK" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9914c3d6d58043338edabf55d4deca60" Name="Diagram1" ZoomLevel="77">
+        <EntityTypeShape EntityType="PostITTModel.CATEGORY" Width="1.5" PointX="0.75" PointY="5.625" />
+        <EntityTypeShape EntityType="PostITTModel.ITTUSER" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="PostITTModel.Medium" Width="1.5" PointX="5.25" PointY="5.25" />
+        <EntityTypeShape EntityType="PostITTModel.MEDIATYPE" Width="1.5" PointX="3" PointY="1.75" />
+        <EntityTypeShape EntityType="PostITTModel.POST" Width="1.5" PointX="3" PointY="4.5" />
+        <EntityTypeShape EntityType="PostITTModel.POSTTYPE" Width="1.5" PointX="0.75" PointY="8.625" />
+        <EntityTypeShape EntityType="PostITTModel.RANK" Width="1.5" PointX="5.25" PointY="2.375" />
+        <EntityTypeShape EntityType="PostITTModel.TAG" Width="1.5" PointX="3" PointY="10.25" />
+        <EntityTypeShape EntityType="PostITTModel.USERTYPE" Width="1.5" PointX="1.5" PointY="13.625" />
+        <AssociationConnector Association="PostITTModel.FK_CATEGORYID_P" />
+        <AssociationConnector Association="PostITTModel.FK_CATEGORYID_T" />
+        <AssociationConnector Association="PostITTModel.FK_USERID_P" />
+        <AssociationConnector Association="PostITTModel.FK_USERID_R" />
+        <AssociationConnector Association="PostITTModel.FK_USERTYPEID_UD" />
+        <AssociationConnector Association="PostITTModel.FK_MEDIATYPEID_M" />
+        <AssociationConnector Association="PostITTModel.FK_POSTID_M" />
+        <AssociationConnector Association="PostITTModel.FK_PARENTID_P" />
+        <AssociationConnector Association="PostITTModel.FK_POSTID_R" />
+        <AssociationConnector Association="PostITTModel.FK_POSTTYPEID_P" />
+        <EntityTypeShape EntityType="PostITTModel.VIEWPOST" Width="1.5" PointX="7.375" PointY="0.75" />
+        <EntityTypeShape EntityType="PostITTModel.CATEGORYVIEW" Width="1.5" PointX="7.375" PointY="4.75" />
+        <EntityTypeShape EntityType="PostITTModel.POSTTYPEDESCVIEW" Width="1.5" PointX="7.375" PointY="7.75" />
+        <EntityTypeShape EntityType="PostITTModel.VIEWUSER" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="PostITTModel.VIEWUSERPOST" Width="1.5" PointX="9.375" PointY="3.75" />
+        <EntityTypeShape EntityType="PostITTModel.VIEWUSERPROFILE" Width="1.5" PointX="5.375" PointY="9.75" />
+        <EntityTypeShape EntityType="PostITTModel.VIEWUSERTYPEPOST" Width="1.5" PointX="9.375" PointY="6.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

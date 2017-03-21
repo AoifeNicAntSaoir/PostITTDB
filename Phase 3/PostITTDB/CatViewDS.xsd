@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CatViewDS" targetNamespace="http://tempuri.org/CatViewDS.xsd" xmlns:mstns="http://tempuri.org/CatViewDS.xsd" xmlns="http://tempuri.org/CatViewDS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="PostITTDB" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PostITTDB (Settings)" ParameterPrefix=":" PropertyReference="ApplicationSettings.PostITTDB.Properties.Settings.GlobalReference.Default.PostITTDB" Provider="Oracle.ManagedDataAccess.Client" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CATEGORYVIEWTableAdapter" GeneratorDataComponentClassName="CATEGORYVIEWTableAdapter" Name="CATEGORYVIEW" UserDataComponentName="CATEGORYVIEWTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PostITTDB (Settings)" DbObjectName="AOIFESAYERS.CATEGORYVIEW" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT CATEGORYID, CATEGORYNAME FROM AOIFESAYERS.CATEGORYVIEW</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="CATEGORYID" DataSetColumn="CATEGORYID" />
+              <Mapping SourceColumn="CATEGORYNAME" DataSetColumn="CATEGORYNAME" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CatViewDS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CatViewDS" msprop:Generator_UserDSName="CatViewDS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CATEGORYVIEW" msprop:Generator_TableClassName="CATEGORYVIEWDataTable" msprop:Generator_TableVarName="tableCATEGORYVIEW" msprop:Generator_TablePropName="CATEGORYVIEW" msprop:Generator_RowDeletingName="CATEGORYVIEWRowDeleting" msprop:Generator_RowChangingName="CATEGORYVIEWRowChanging" msprop:Generator_RowEvHandlerName="CATEGORYVIEWRowChangeEventHandler" msprop:Generator_RowDeletedName="CATEGORYVIEWRowDeleted" msprop:Generator_UserTableName="CATEGORYVIEW" msprop:Generator_RowChangedName="CATEGORYVIEWRowChanged" msprop:Generator_RowEvArgName="CATEGORYVIEWRowChangeEvent" msprop:Generator_RowClassName="CATEGORYVIEWRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CATEGORYID" msprop:Generator_ColumnVarNameInTable="columnCATEGORYID" msprop:Generator_ColumnPropNameInRow="CATEGORYID" msprop:Generator_ColumnPropNameInTable="CATEGORYIDColumn" msprop:Generator_UserColumnName="CATEGORYID" type="xs:int" />
+              <xs:element name="CATEGORYNAME" msprop:Generator_ColumnVarNameInTable="columnCATEGORYNAME" msprop:Generator_ColumnPropNameInRow="CATEGORYNAME" msprop:Generator_ColumnPropNameInTable="CATEGORYNAMEColumn" msprop:Generator_UserColumnName="CATEGORYNAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
